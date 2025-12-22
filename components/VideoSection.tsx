@@ -15,7 +15,7 @@ export default function VideoSection({ videoId, title, subtitle }: VideoSectionP
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="w-full section-spacing bg-forest-900">
+    <section ref={ref} className="w-full section-spacing bg-gradient-to-b from-forest-900 to-forest-800 -mt-1">
       <div className="container-padding max-w-[1200px] mx-auto">
         {(title || subtitle) && (
           <motion.div

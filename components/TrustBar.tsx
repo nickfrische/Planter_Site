@@ -36,7 +36,7 @@ export default function TrustBar() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="w-full bg-white py-12 md:py-16">
+    <section ref={ref} className="w-full bg-gradient-to-b from-white via-white to-cream-100 py-12 md:py-16 pb-20 md:pb-24 relative">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 container-padding max-w-[1400px] mx-auto">
         {trustItems.map((item, index) => (
           <motion.div
@@ -50,6 +50,29 @@ export default function TrustBar() {
             <p className="text-lg font-medium text-gray-900">{item.label}</p>
           </motion.div>
         ))}
+      </div>
+      
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">
+        <svg
+          className="relative block w-full h-[60px] md:h-[80px]"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z"
+            fill="#16402e"
+            opacity="0.3"
+          />
+          <path
+            d="M0,20 C200,80 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"
+            fill="#16402e"
+            opacity="0.5"
+          />
+          <path
+            d="M0,40 C250,100 450,40 600,70 C750,100 950,40 1200,70 L1200,120 L0,120 Z"
+            fill="#16402e"
+          />
+        </svg>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="w-full min-h-screen grid lg:grid-cols-2">
+    <section className="w-full min-h-screen grid lg:grid-cols-2 relative">
       <div className="relative h-[50vh] lg:h-screen bg-gray-900 overflow-hidden">
         <video
           autoPlay
@@ -25,7 +25,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="flex flex-col justify-center p-8 lg:p-16 xl:p-24 bg-cream-50"
+        className="flex flex-col justify-center p-8 lg:p-16 xl:p-24 bg-gradient-to-b from-cream-50 to-white"
       >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
