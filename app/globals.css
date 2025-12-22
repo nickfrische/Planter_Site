@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+
+  --color-forest-50: #f0f9f4;
+  --color-forest-100: #dcf2e4;
+  --color-forest-200: #bce4cd;
+  --color-forest-300: #8dd0ad;
+  --color-forest-400: #5ab388;
+  --color-forest-500: #36966a;
+  --color-forest-600: #267854;
+  --color-forest-700: #1f6044;
+  --color-forest-800: #1a4d37;
+  --color-forest-900: #16402e;
+
+  --color-cream-50: #fdfcfb;
+  --color-cream-100: #faf8f5;
+  --color-cream-200: #f5f2eb;
+  --color-cream-300: #ebe6da;
+  --color-cream-400: #dfd7c5;
+  --color-cream-500: #d1c6af;
+  --color-cream-600: #bfb299;
+  --color-cream-700: #a89b7f;
+  --color-cream-800: #8a7f6a;
+  --color-cream-900: #716856;
+
+  --color-earth-50: #faf8f5;
+  --color-earth-100: #f2ede5;
+  --color-earth-200: #e3d8c8;
+  --color-earth-300: #d0bda4;
+  --color-earth-400: #b99d7e;
+  --color-earth-500: #a78461;
+  --color-earth-600: #997255;
+  --color-earth-700: #7f5e47;
+  --color-earth-800: #6a4f3d;
+  --color-earth-900: #574133;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #111827;
+  background: white;
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair);
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.875rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.edge-to-edge {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.section-spacing {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-spacing {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
