@@ -20,7 +20,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="flex items-center justify-between h-[72px] px-6 lg:px-12 max-w-[1800px] mx-auto">
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-serif font-bold text-forest-700">
+          <span className="text-2xl font-[var(--font-sora)] font-bold text-forest-700">
             Planter Business
           </span>
         </Link>

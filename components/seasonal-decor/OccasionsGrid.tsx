@@ -78,7 +78,7 @@ export default function OccasionsGrid() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <h3 className="text-white text-2xl md:text-3xl font-serif font-bold mb-3">
+                <h3 className="text-white text-2xl md:text-3xl font-[var(--font-sora)] font-bold mb-3">
                   {occasion.title}
                 </h3>
                 <p className="text-white/90 text-base md:text-lg">

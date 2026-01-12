@@ -11,7 +11,7 @@ const services = [
     title: 'Planter Subscriptions',
     description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included.',
     href: '/planter-subscriptions',
-    image: '/images/service-planters.jpg',
+    image: '/images/corporate planter.jpg',
     icon: (
       // Potted plant icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const services = [
     title: 'Seasonal Decor',
     description: 'Special occasion decorations for holidays, life events, and celebrations. One-time installations.',
     href: '/seasonal-decor',
-    image: '/images/service-seasonal.jpg',
+    image: '/images/seasonal decor.jpeg',
     icon: (
       // Wreath/decorative circle icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ const services = [
     title: 'Irrigation',
     description: 'Professional container plant irrigation setup and maintenance to keep your plants healthy.',
     href: '/irrigation',
-    image: '/images/service-irrigation.jpg',
+    image: '/images/irrigation.jpeg',
     icon: (
       // Water drops icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ const services = [
     title: 'Events & Rentals',
     description: 'Short-term planter solutions for parties, corporate events, real estate staging, and vacation rentals.',
     href: '/events-rentals',
-    image: '/images/service-events.jpg',
+    image: '/images/event flower.webp',
     icon: (
       // Calendar with sparkle icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,9 +196,11 @@ export default function WhatWeDo() {
                     href={service.href}
                     className="group block relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300"
                   >
-                    <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                      {service.title} image placeholder
-                    </div>
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-8">
                       <div className="flex items-center gap-3 mb-3">
@@ -206,7 +208,7 @@ export default function WhatWeDo() {
                           {service.icon}
                         </div>
                       </div>
-                      <h3 className="text-white text-2xl md:text-3xl font-serif font-bold mb-3">
+                      <h3 className="text-white text-2xl md:text-3xl font-[var(--font-sora)] font-bold mb-3">
                         {service.title}
                       </h3>
                       <p className="text-white/90 text-sm md:text-base mb-4 max-w-2xl">
@@ -236,9 +238,11 @@ export default function WhatWeDo() {
                 className="relative h-[70vh] min-h-[500px]"
               >
                 <Link href={service.href} className="group block relative w-full h-full">
-                  <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                    {service.title} image placeholder
-                  </div>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
@@ -249,7 +253,7 @@ export default function WhatWeDo() {
                       </div>
                     </div>
 
-                    <h3 className="text-white text-3xl font-serif font-bold mb-4">
+                    <h3 className="text-white text-3xl font-[var(--font-sora)] font-bold mb-4">
                       {service.title}
                     </h3>
 

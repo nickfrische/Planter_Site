@@ -2,7 +2,7 @@
 
 @theme {
   --font-inter: 'Inter', system-ui, sans-serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-sora: 'Sora', system-ui, sans-serif;
 
   --color-forest-50: #f0f9f4;
   --color-forest-100: #dcf2e4;
@@ -58,7 +58,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair);
+  font-family: var(--font-sora);
+  letter-spacing: -0.02em;
 }
 
 h1 {

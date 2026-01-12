@@ -9,7 +9,7 @@ const seasons = [
     id: 'spring',
     label: 'Spring',
     description: 'Vibrant tulips, pansies, and fresh greenery bring color back after winter.',
-    image: '/images/season-spring.jpg',
+    image: '/images/spring_planter.webp',
     icon: (
       // Flower blooming icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const seasons = [
     id: 'summer',
     label: 'Summer',
     description: 'Bold geraniums, petunias, and trailing vines thrive in the warmth.',
-    image: '/images/season-summer.jpg',
+    image: '/images/summer_planter.jpg',
     icon: (
       // Sun with rays icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ const seasons = [
     id: 'fall',
     label: 'Fall',
     description: 'Warm mums, ornamental kale, and autumn foliage set a cozy mood.',
-    image: '/images/season-fall.jpg',
+    image: '/images/fall_planter.jpg',
     icon: (
       // Maple leaf icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ const seasons = [
     id: 'winter',
     label: 'Winter',
     description: 'Evergreens, berries, and festive accents through the holidays.',
-    image: '/images/season-winter.jpg',
+    image: '/images/winter_planter1.webp',
     icon: (
       // Snowflake icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,9 +132,11 @@ export default function SeasonalPreview() {
                   className="scroll-mt-32"
                 >
                   <div className="group block relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-100 shadow-lg">
-                    <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                      {season.label} image placeholder
-                    </div>
+                    <img
+                      src={season.image}
+                      alt={`${season.label} planter arrangement`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-8">
                       <div className="flex items-center gap-3 mb-3">
@@ -142,7 +144,7 @@ export default function SeasonalPreview() {
                           {season.icon}
                         </div>
                       </div>
-                      <h3 className="text-white text-2xl md:text-3xl font-serif font-bold mb-3">
+                      <h3 className="text-white text-2xl md:text-3xl font-[var(--font-sora)] font-bold mb-3">
                         {season.label}
                       </h3>
                       <p className="text-white/90 text-sm md:text-base max-w-2xl">
@@ -225,9 +227,11 @@ export default function SeasonalPreview() {
                 className="relative h-[60vh] min-h-[400px]"
               >
                 <div className="block relative w-full h-full">
-                  <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-                    {season.label} image placeholder
-                  </div>
+                  <img
+                    src={season.image}
+                    alt={`${season.label} planter arrangement`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
@@ -238,7 +242,7 @@ export default function SeasonalPreview() {
                       </div>
                     </div>
 
-                    <h3 className="text-white text-3xl font-serif font-bold mb-4">
+                    <h3 className="text-white text-3xl font-[var(--font-sora)] font-bold mb-4">
                       {season.label}
                     </h3>
 

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container-padding section-spacing max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="text-2xl font-serif font-bold mb-3">
+            <div className="text-2xl font-[var(--font-sora)] font-bold mb-3">
               Planter Business
             </div>
             <p className="text-gray-400">Your Private Gardener</p>
