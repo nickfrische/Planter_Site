@@ -15,32 +15,34 @@ export default function VideoSection({ videoId, title, subtitle }: VideoSectionP
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="w-full section-spacing bg-gradient-to-b from-forest-900 to-forest-800 -mt-1">
-      <div className="container-padding max-w-[1200px] mx-auto">
-        {(title || subtitle) && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            {title && (
-              <h2 className="text-white mb-4">{title}</h2>
-            )}
-            {subtitle && (
-              <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
-                {subtitle}
-              </p>
-            )}
-          </motion.div>
-        )}
-
+    <section ref={ref} className="w-full bg-forest-900 py-16 md:py-20 lg:py-24">
+      {/* Text Block Above Video */}
+      {(title || subtitle) && (
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10 md:mb-14 px-6"
         >
+          {title && (
+            <h2 className="text-white mb-4">{title}</h2>
+          )}
+          {subtitle && (
+            <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
+              {subtitle}
+            </p>
+          )}
+        </motion.div>
+      )}
+
+      {/* Full-Width Video Container */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="w-full px-4 md:px-8 lg:px-16"
+      >
+        <div className="relative w-full max-w-[1600px] mx-auto aspect-video rounded-lg md:rounded-xl overflow-hidden shadow-2xl bg-black">
           <iframe
             src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
             title="YouTube video player"
@@ -48,8 +50,8 @@ export default function VideoSection({ videoId, title, subtitle }: VideoSectionP
             allowFullScreen
             className="absolute inset-0 w-full h-full"
           />
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

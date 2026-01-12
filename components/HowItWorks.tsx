@@ -1,87 +1,136 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const steps = [
   {
-    number: '01',
-    title: 'We Visit Your Space',
+    title: 'We Come to You',
     icon: (
-      <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
       </svg>
     ),
   },
   {
-    number: '02',
     title: 'We Design & Install',
     icon: (
-      <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14c-3 0-5.5-2-6-5 3-.5 5.5 1 6 4 .5-3 3-4.5 6-4-0.5 3-3 5-6 5zm0 0v6m-3 0h6M7 20h10" />
       </svg>
     ),
   },
   {
-    number: '03',
-    title: 'We Handle Everything',
+    title: 'No Maintenance Required',
     icon: (
-      <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
       </svg>
     ),
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const lineVariants = {
+  hidden: { scaleX: 0, opacity: 0 },
+  visible: {
+    scaleX: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+      delay: 0.4,
+    },
+  },
+};
+
 export default function HowItWorks() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
+  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
     <section
       id="how-it-works"
       ref={ref}
-      className="w-full section-spacing bg-cream-50"
+      className="w-full py-20 md:py-28 bg-forest-900"
     >
-      <motion.div
-        style={{ opacity }}
-        className="container-padding max-w-[1400px] mx-auto"
-      >
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-forest-900 mb-16"
+      <div className="container-padding max-w-[1000px] mx-auto">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0"
         >
-          How It Works
-        </motion.h2>
-
-        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
           {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              className="flex flex-col items-center text-center"
-            >
-              <span className="text-6xl font-serif font-bold text-forest-200 mb-6">
-                {step.number}
-              </span>
-              <div className="text-forest-600 mb-6">{step.icon}</div>
-              <h3 className="text-gray-900">{step.title}</h3>
-            </motion.div>
+            <div key={index} className="flex items-center">
+              {/* Step Item */}
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col items-center text-center group"
+              >
+                <div className="relative">
+                  {/* Glow effect on hover */}
+                  <div className="absolute inset-0 rounded-full bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {/* Icon circle */}
+                  <div className="relative w-[72px] h-[72px] rounded-full bg-white/[0.08] border border-white/20 text-white flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-white/[0.15] group-hover:border-white/30 group-hover:scale-105">
+                    {step.icon}
+                  </div>
+                </div>
+
+                <span className="text-[15px] font-medium text-white/90 tracking-wide group-hover:text-white transition-colors duration-300">
+                  {step.title}
+                </span>
+              </motion.div>
+
+              {/* Connector Line */}
+              {index < steps.length - 1 && (
+                <motion.div
+                  variants={lineVariants}
+                  className="hidden md:flex items-center mx-12 origin-left"
+                >
+                  <div className="w-20 h-[1px] bg-gradient-to-r from-white/30 to-white/10" />
+                  <svg className="w-3 h-3 text-white/30 -ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                  </svg>
+                </motion.div>
+              )}
+
+              {/* Mobile connector */}
+              {index < steps.length - 1 && (
+                <motion.div
+                  variants={lineVariants}
+                  className="md:hidden absolute left-1/2 -translate-x-1/2 h-8 w-[1px] bg-gradient-to-b from-white/30 to-white/10 -mb-4"
+                  style={{ display: 'none' }}
+                />
+              )}
+            </div>
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

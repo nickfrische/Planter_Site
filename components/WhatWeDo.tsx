@@ -8,66 +8,58 @@ import Link from 'next/link';
 const services = [
   {
     id: 'planters',
-    number: '01',
     title: 'Planter Subscriptions',
     description: 'Year-round beauty with seasonal refreshes. Professional design, installation, and maintenance included.',
     href: '/planter-subscriptions',
     image: '/images/service-planters.jpg',
     icon: (
+      // Potted plant icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14c-3 0-5.5-2-6-5 3-.5 5.5 1 6 4 .5-3 3-4.5 6-4-0.5 3-3 5-6 5zm0 0v6m-3 0h6M7 20h10" />
       </svg>
     ),
   },
   {
     id: 'seasonal',
-    number: '02',
     title: 'Seasonal Decor',
     description: 'Special occasion decorations for holidays, life events, and celebrations. One-time installations.',
     href: '/seasonal-decor',
     image: '/images/service-seasonal.jpg',
     icon: (
+      // Wreath/decorative circle icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        <circle cx="12" cy="12" r="8" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4c1 2 2 3 4 3M20 12c-2 1-3 2-3 4M12 20c-1-2-2-3-4-3M4 12c2-1 3-2 3-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v.01M16 12h.01M12 16v.01M8 12h.01" />
       </svg>
     ),
   },
   {
     id: 'irrigation',
-    number: '03',
     title: 'Irrigation',
     description: 'Professional container plant irrigation setup and maintenance to keep your plants healthy.',
     href: '/irrigation',
     image: '/images/service-irrigation.jpg',
     icon: (
+      // Water drops icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-      </svg>
-    ),
-  },
-  {
-    id: 'maintenance',
-    number: '04',
-    title: 'Maintenance',
-    description: 'Expert plant care including watering, pruning, deadheading, and health monitoring.',
-    href: '/maintenance',
-    image: '/images/service-maintenance.jpg',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21c-3.5 0-6-2.5-6-5.5 0-3.5 6-9.5 6-9.5s6 6 6 9.5c0 3-2.5 5.5-6 5.5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18c-1.5 0-2.5-1-2.5-2.5" />
       </svg>
     ),
   },
   {
     id: 'events',
-    number: '05',
     title: 'Events & Rentals',
     description: 'Short-term planter solutions for parties, corporate events, real estate staging, and vacation rentals.',
     href: '/events-rentals',
     image: '/images/service-events.jpg',
     icon: (
+      // Calendar with sparkle icon
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+        <rect x="3" y="4" width="18" height="18" rx="2" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 2v4M8 2v4M3 10h18" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l1 2 2 .5-1.5 1.5.5 2-2-1-2 1 .5-2L9 16.5l2-.5 1-2z" />
       </svg>
     ),
   },
@@ -125,6 +117,7 @@ export default function WhatWeDo() {
         </motion.h2>
 
         <div className="grid lg:grid-cols-[400px_1fr] gap-12 lg:gap-16 items-start">
+          {/* Desktop Sidebar - Previous Style without numbers */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
@@ -150,26 +143,15 @@ export default function WhatWeDo() {
                     {service.icon}
                   </div>
                   <div className="flex-1 pt-1">
-                    <div className="flex items-baseline gap-3 mb-1">
-                      <span
-                        className={`text-sm font-mono transition-all duration-300 ${
-                          activeService === service.id
-                            ? 'text-forest-600 font-bold'
-                            : 'text-gray-400'
-                        }`}
-                      >
-                        {service.number}
-                      </span>
-                      <h3
-                        className={`text-lg font-semibold transition-all duration-300 ${
-                          activeService === service.id
-                            ? 'text-forest-900 font-bold'
-                            : 'text-gray-700'
-                        }`}
-                      >
-                        {service.title}
-                      </h3>
-                    </div>
+                    <h3
+                      className={`text-lg font-semibold transition-all duration-300 mb-1 ${
+                        activeService === service.id
+                          ? 'text-forest-900 font-bold'
+                          : 'text-gray-700'
+                      }`}
+                    >
+                      {service.title}
+                    </h3>
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
                         activeService === service.id
@@ -194,6 +176,7 @@ export default function WhatWeDo() {
             ))}
           </motion.div>
 
+          {/* Desktop Service Cards */}
           <div className="hidden lg:block">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -201,7 +184,7 @@ export default function WhatWeDo() {
               transition={{ duration: 0.7 }}
               className="space-y-12"
             >
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <div
                   key={service.id}
                   ref={(el) => {
@@ -213,7 +196,7 @@ export default function WhatWeDo() {
                     href={service.href}
                     className="group block relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-100 shadow-lg hover:shadow-2xl transition-shadow duration-300"
                   >
-                    <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
+                    <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
                       {service.title} image placeholder
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -222,9 +205,6 @@ export default function WhatWeDo() {
                         <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                           {service.icon}
                         </div>
-                        <span className="text-sm font-mono text-white/70">
-                          {service.number}
-                        </span>
                       </div>
                       <h3 className="text-white text-2xl md:text-3xl font-serif font-bold mb-3">
                         {service.title}
@@ -245,6 +225,7 @@ export default function WhatWeDo() {
             </motion.div>
           </div>
 
+          {/* Mobile Full-Screen Cards */}
           <div className="lg:hidden -mx-6 space-y-0">
             {services.map((service, index) => (
               <motion.div
@@ -252,10 +233,10 @@ export default function WhatWeDo() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative h-screen snap-start flex-shrink-0"
+                className="relative h-[70vh] min-h-[500px]"
               >
                 <Link href={service.href} className="group block relative w-full h-full">
-                  <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
+                  <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
                     {service.title} image placeholder
                   </div>
 
@@ -266,12 +247,9 @@ export default function WhatWeDo() {
                       <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                         {service.icon}
                       </div>
-                      <span className="text-base font-mono text-white/60">
-                        {service.number}
-                      </span>
                     </div>
 
-                    <h3 className="text-white text-4xl font-serif font-bold mb-4">
+                    <h3 className="text-white text-3xl font-serif font-bold mb-4">
                       {service.title}
                     </h3>
 

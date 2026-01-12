@@ -5,66 +5,66 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="w-full min-h-screen grid lg:grid-cols-2 relative">
-      <div className="relative h-[50vh] lg:h-screen bg-gray-900 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/images/hero-poster.jpg"
-        >
-          <source src="/videos/hero-planters.webm" type="video/webm" />
-          <source src="/videos/hero-planters.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:hidden" />
+    <section className="relative w-full h-[70vh] min-h-[500px] max-h-[800px] overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/potted_plants_patio_pool.webp"
+          alt="Beautiful patio with potted plants by the pool"
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="flex flex-col justify-center p-8 lg:p-16 xl:p-24 bg-gradient-to-b from-cream-50 to-white"
-      >
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-forest-900 mb-6"
-        >
-          Your Private Gardener
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-xl md:text-2xl text-gray-700 mb-8 max-w-xl"
-        >
-          Professional seasonal planters, designed and installed for you.
-        </motion.p>
-        
+      {/* Gradient Overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
+
+      {/* Centered Content Overlay */}
+      <div className="relative z-10 h-full flex items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-4"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center px-6 max-w-3xl mx-auto"
         >
-          <Link
-            href="#how-it-works"
-            className="px-8 py-3.5 bg-white border-2 border-forest-600 text-forest-700 font-semibold rounded-md hover:bg-forest-50 transition-colors text-center"
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-white mb-4 drop-shadow-lg"
           >
-            See How It Works
-          </Link>
-          <Link
-            href="#contact"
-            className="px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-center"
+            Your Private Gardener
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light"
           >
-            Request a Consultation
-          </Link>
+            Professional seasonal planters, designed and installed for you.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link
+              href="#how-it-works"
+              className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-medium rounded-md hover:bg-white/20 transition-all text-center"
+            >
+              See How It Works
+            </Link>
+            <Link
+              href="#contact"
+              className="px-8 py-3 bg-white text-forest-800 font-semibold rounded-md hover:bg-cream-100 transition-colors text-center"
+            >
+              Request a Consultation
+            </Link>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

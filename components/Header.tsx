@@ -11,7 +11,6 @@ export default function Header() {
     { href: '/planter-subscriptions', label: 'Planter Subscriptions' },
     { href: '/seasonal-decor', label: 'Seasonal Decor' },
     { href: '/irrigation', label: 'Irrigation' },
-    { href: '/maintenance', label: 'Maintenance' },
     { href: '/events-rentals', label: 'Events & Rentals' },
     { href: '/about', label: 'About Us' },
     { href: '/faq', label: 'FAQ' },
