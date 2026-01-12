@@ -63,14 +63,14 @@ export default function HowItWorks() {
     <section
       id="how-it-works"
       ref={ref}
-      className="w-full pt-16 md:pt-20 pb-20 md:pb-28 bg-forest-900"
+      className="w-full py-12 md:pt-20 md:pb-28 bg-forest-900"
     >
       <div className="container-padding max-w-[1100px] mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.4 }}
-          className="text-center text-white/50 text-xs uppercase tracking-[0.25em] mb-10"
+          className="text-center text-white/50 text-xs uppercase tracking-[0.25em] mb-8 md:mb-10"
         >
           How It Works
         </motion.p>
@@ -79,7 +79,7 @@ export default function HowItWorks() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-0"
+          className="flex flex-row items-start justify-center gap-4 md:gap-0"
         >
           {steps.map((step, index) => (
             <motion.div
@@ -88,27 +88,29 @@ export default function HowItWorks() {
               className="flex items-center"
             >
               {/* Step Item */}
-              <div className="flex flex-col items-center text-center group w-[180px]">
+              <div className="flex flex-col items-center text-center group w-[100px] md:w-[180px]">
                 <div className="relative">
                   {/* Glow effect on hover */}
                   <div className="absolute inset-0 rounded-full bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Icon circle */}
-                  <div className="relative w-[72px] h-[72px] rounded-full bg-white/[0.08] border border-white/20 text-white flex items-center justify-center mb-4 transition-all duration-300 group-hover:bg-white/[0.15] group-hover:border-white/30 group-hover:scale-105">
-                    {step.icon}
+                  <div className="relative w-14 h-14 md:w-[72px] md:h-[72px] rounded-full bg-white/[0.08] border border-white/20 text-white flex items-center justify-center mb-3 md:mb-4 transition-all duration-300 group-hover:bg-white/[0.15] group-hover:border-white/30 group-hover:scale-105">
+                    <div className="w-6 h-6 md:w-8 md:h-8 [&>svg]:w-full [&>svg]:h-full">
+                      {step.icon}
+                    </div>
                   </div>
                 </div>
 
-                <span className="text-[14px] font-medium text-white/90 tracking-wide group-hover:text-white transition-colors duration-300">
+                <span className="text-[11px] md:text-[14px] font-medium text-white/90 tracking-wide group-hover:text-white transition-colors duration-300 leading-tight">
                   {step.title}
                 </span>
               </div>
 
-              {/* Connector Line */}
+              {/* Connector Line - visible on all screens */}
               {index < steps.length - 1 && (
-                <div className="hidden md:flex items-center w-16 justify-center">
-                  <div className="w-10 h-[1px] bg-white/20" />
-                  <svg className="w-2.5 h-2.5 text-white/20 -ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center w-6 md:w-16 justify-center -mt-6 md:-mt-4">
+                  <div className="w-4 md:w-10 h-[1px] bg-white/20" />
+                  <svg className="w-2 h-2 md:w-2.5 md:h-2.5 text-white/20 -ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                   </svg>
                 </div>
