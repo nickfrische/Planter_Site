@@ -21,13 +21,6 @@ export default function HomePage() {
         {/* Hero - Full edge-to-edge with centered overlay */}
         <Hero />
 
-        {/* Video Section - Full-width explainer video */}
-        <VideoSection
-          videoId="dQw4w9WgXcQ"
-          title="See How We Transform Your Space"
-          subtitle="Watch our process from consultation to installation"
-        />
-
         {/* How It Works - Compact 3-step process */}
         <HowItWorks />
 
@@ -36,6 +29,13 @@ export default function HomePage() {
 
         {/* Seasonal Preview - "Always in Season" */}
         <SeasonalPreview />
+
+        {/* Video Section - Full-width explainer video */}
+        <VideoSection
+          videoId="dQw4w9WgXcQ"
+          title="See How We Transform Your Space"
+          subtitle="Watch our process from consultation to installation"
+        />
 
         {/* Testimonials - Multi-card carousel */}
         <Testimonials />
