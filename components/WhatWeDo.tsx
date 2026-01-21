@@ -130,25 +130,27 @@ export default function WhatWeDo() {
               key={service.id}
               onClick={() => scrollToService(service.id)}
               className={`w-full text-left group transition-all duration-300 ${
-                activeService === service.id ? '' : 'opacity-50 hover:opacity-75'
+                activeService === service.id ? '' : 'opacity-40 hover:opacity-60'
               }`}
             >
               <div className="flex items-start gap-4">
                 <div
-                  className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  className={`flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${
                     activeService === service.id
-                      ? 'bg-forest-600 text-white scale-110'
-                      : 'bg-white text-forest-600 border-2 border-gray-200'
+                      ? 'w-14 h-14 bg-forest-600 text-white'
+                      : 'w-12 h-12 bg-white text-forest-600 border-2 border-gray-200'
                   }`}
                 >
-                  {service.icon}
+                  <div className={activeService === service.id ? 'scale-110' : ''}>
+                    {service.icon}
+                  </div>
                 </div>
-                <div className="flex-1 pt-1">
+                <div className="flex-1">
                   <h3
-                    className={`text-lg font-semibold transition-all duration-300 mb-1 ${
+                    className={`font-[var(--font-sora)] transition-all duration-300 ${
                       activeService === service.id
-                        ? 'text-forest-900 font-bold'
-                        : 'text-gray-700'
+                        ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
+                        : 'text-xl font-semibold text-gray-600 mb-0'
                     }`}
                   >
                     {service.title}
@@ -156,20 +158,20 @@ export default function WhatWeDo() {
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
                       activeService === service.id
-                        ? 'max-h-24 opacity-100'
+                        ? 'max-h-32 opacity-100'
                         : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-base text-gray-600 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
                 </div>
               </div>
               <div
-                className={`mt-3 ml-16 h-0.5 transition-all duration-300 ${
+                className={`mt-4 ml-18 h-1 rounded-full transition-all duration-300 ${
                   activeService === service.id
-                    ? 'bg-forest-600 w-12'
+                    ? 'bg-forest-600 w-16'
                     : 'bg-gray-200 w-8'
                 }`}
               />
@@ -208,14 +210,18 @@ export default function WhatWeDo() {
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                       {service.icon}
                     </div>
                   </div>
-                  <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-[var(--font-sora)] font-bold mb-3 group-hover:underline decoration-2 underline-offset-4">
-                    {service.title}
+                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-sora)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase mb-2 flex items-center gap-4">
+                    {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
+                    <svg className="w-8 h-8 lg:w-10 lg:h-10 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </h3>
+                  <div className="h-0.5 bg-white/50 w-0 group-hover:w-32 transition-all duration-300 mb-4" />
                   <p className="text-white/90 text-base lg:text-lg max-w-2xl">
                     {service.description}
                   </p>
@@ -234,16 +240,16 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-[calc(100vh-80px)]"
+            className="relative h-[calc(100vh-80px)] overflow-hidden"
           >
             <Link href={service.href} className="group block relative w-full h-full">
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* Tap indicator */}
               <div className="absolute top-1/2 right-6 -translate-y-1/2">
@@ -254,18 +260,21 @@ export default function WhatWeDo() {
                 </div>
               </div>
 
-              <div className="absolute inset-0 flex flex-col justify-end p-8">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                     {service.icon}
                   </div>
                 </div>
 
-                <h3 className="text-white text-3xl font-[var(--font-sora)] font-bold mb-4">
-                  {service.title}
+                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-sora)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase mb-2 flex items-center gap-3">
+                  {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
+                  <svg className="w-6 h-6 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </h3>
-
-                <p className="text-white/90 text-lg">
+                <div className="h-0.5 bg-white/50 w-24 group-hover:w-32 group-active:w-32 transition-all duration-300 mb-4" />
+                <p className="text-white/90 text-base">
                   {service.description}
                 </p>
               </div>

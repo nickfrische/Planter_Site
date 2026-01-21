@@ -129,19 +129,21 @@ export default function SeasonalPreview() {
                 <img
                   src={season.image}
                   alt={`${season.label} planter arrangement`}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                {/* Bottom content with elongated title */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                       {season.icon}
                     </div>
                   </div>
-                  <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-[var(--font-sora)] font-bold mb-3">
-                    {season.label}
+                  <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-sora)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase mb-4">
+                    {season.label.split('').join(' ')}
                   </h3>
-                  <p className="text-white/90 text-base lg:text-lg max-w-2xl">
+                  <p className="text-white/90 text-base lg:text-lg max-w-xl">
                     {season.description}
                   </p>
                 </div>
@@ -162,25 +164,27 @@ export default function SeasonalPreview() {
               key={season.id}
               onClick={() => scrollToSeason(season.id)}
               className={`w-full text-left group transition-all duration-300 ${
-                activeSeason === season.id ? '' : 'opacity-50 hover:opacity-75'
+                activeSeason === season.id ? '' : 'opacity-40 hover:opacity-60'
               }`}
             >
               <div className="flex items-start gap-4">
                 <div
-                  className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  className={`flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${
                     activeSeason === season.id
-                      ? 'bg-forest-600 text-white scale-110'
-                      : 'bg-white text-forest-600 border-2 border-gray-200'
+                      ? 'w-14 h-14 bg-forest-600 text-white'
+                      : 'w-12 h-12 bg-white text-forest-600 border-2 border-gray-200'
                   }`}
                 >
-                  {season.icon}
+                  <div className={activeSeason === season.id ? 'scale-110' : ''}>
+                    {season.icon}
+                  </div>
                 </div>
-                <div className="flex-1 pt-1">
+                <div className="flex-1">
                   <h3
-                    className={`text-lg font-semibold transition-all duration-300 mb-1 ${
+                    className={`font-[var(--font-sora)] transition-all duration-300 ${
                       activeSeason === season.id
-                        ? 'text-forest-900 font-bold'
-                        : 'text-gray-700'
+                        ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
+                        : 'text-xl font-semibold text-gray-600 mb-0'
                     }`}
                   >
                     {season.label}
@@ -188,20 +192,20 @@ export default function SeasonalPreview() {
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
                       activeSeason === season.id
-                        ? 'max-h-24 opacity-100'
+                        ? 'max-h-32 opacity-100'
                         : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-base text-gray-600 leading-relaxed">
                       {season.description}
                     </p>
                   </div>
                 </div>
               </div>
               <div
-                className={`mt-3 ml-16 h-0.5 transition-all duration-300 ${
+                className={`mt-4 ml-18 h-1 rounded-full transition-all duration-300 ${
                   activeSeason === season.id
-                    ? 'bg-forest-600 w-12'
+                    ? 'bg-forest-600 w-16'
                     : 'bg-gray-200 w-8'
                 }`}
               />
@@ -218,29 +222,30 @@ export default function SeasonalPreview() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative h-[calc(100vh-80px)]"
+            className="relative h-[calc(100vh-80px)] overflow-hidden group"
           >
             <div className="block relative w-full h-full">
               <img
                 src={season.image}
                 alt={`${season.label} planter arrangement`}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-8">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+              {/* Bottom content with elongated title */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
                     {season.icon}
                   </div>
                 </div>
 
-                <h3 className="text-white text-3xl font-[var(--font-sora)] font-bold mb-4">
-                  {season.label}
+                <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-sora)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-4">
+                  {season.label.split('').join(' ')}
                 </h3>
 
-                <p className="text-white/90 text-lg">
+                <p className="text-white/90 text-base">
                   {season.description}
                 </p>
               </div>
