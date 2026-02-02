@@ -147,7 +147,7 @@ export default function WhatWeDo() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className={`font-[var(--font-sora)] transition-all duration-300 ${
+                    className={`font-[var(--font-poppins)] transition-all duration-300 ${
                       activeService === service.id
                         ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
                         : 'text-xl font-semibold text-gray-600 mb-0'
@@ -215,7 +215,7 @@ export default function WhatWeDo() {
                       {service.icon}
                     </div>
                   </div>
-                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-sora)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase mb-2 flex items-center gap-4">
+                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-poppins)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase mb-2 flex items-center gap-4">
                     {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
                     <svg className="w-8 h-8 lg:w-10 lg:h-10 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -267,7 +267,7 @@ export default function WhatWeDo() {
                   </div>
                 </div>
 
-                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-sora)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase mb-2 flex items-center gap-3">
+                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-poppins)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase mb-2 flex items-center gap-3">
                   {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
                   <svg className="w-6 h-6 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

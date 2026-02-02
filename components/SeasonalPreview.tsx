@@ -140,7 +140,7 @@ export default function SeasonalPreview() {
                       {season.icon}
                     </div>
                   </div>
-                  <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-sora)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase mb-4">
+                  <h3 className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[var(--font-poppins)] font-bold tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] uppercase mb-4">
                     {season.label.split('').join(' ')}
                   </h3>
                   <p className="text-white/90 text-base lg:text-lg max-w-xl">
@@ -181,7 +181,7 @@ export default function SeasonalPreview() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className={`font-[var(--font-sora)] transition-all duration-300 ${
+                    className={`font-[var(--font-poppins)] transition-all duration-300 ${
                       activeSeason === season.id
                         ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
                         : 'text-xl font-semibold text-gray-600 mb-0'
@@ -241,7 +241,7 @@ export default function SeasonalPreview() {
                   </div>
                 </div>
 
-                <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-sora)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-4">
+                <h3 className="text-white text-3xl sm:text-4xl font-[var(--font-poppins)] font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-4">
                   {season.label.split('').join(' ')}
                 </h3>
 

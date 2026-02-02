@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-sora: 'Sora', system-ui, sans-serif;
+  --font-poppins: 'Poppins', system-ui, sans-serif;
 
   --color-forest-50: #f0f9f4;
   --color-forest-100: #dcf2e4;
@@ -45,7 +44,7 @@ html {
 body {
   color: #111827;
   background: white;
-  font-family: var(--font-inter);
+  font-family: var(--font-poppins);
 }
 
 .scrollbar-hide {
@@ -58,7 +57,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sora);
+  font-family: var(--font-poppins);
   letter-spacing: -0.02em;
 }
 

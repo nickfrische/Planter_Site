@@ -5,14 +5,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const fonts = [
-  { name: 'Sora', family: 'var(--font-sora)', category: 'Sans-serif', description: 'Modern, geometric, highly legible' },
-  { name: 'Inter', family: 'var(--font-inter)', category: 'Sans-serif', description: 'Clean, versatile, great for UI' },
+  { name: 'Poppins (Current)', family: 'var(--font-poppins)', category: 'Sans-serif', description: 'Geometric, friendly, versatile' },
   { name: 'Playfair Display', family: '"Playfair Display", serif', category: 'Serif', description: 'Elegant, classic, editorial feel' },
   { name: 'Lora', family: '"Lora", serif', category: 'Serif', description: 'Well-balanced, contemporary serif' },
   { name: 'Merriweather', family: '"Merriweather", serif', category: 'Serif', description: 'Warm, readable, screen-optimized' },
   { name: 'Montserrat', family: '"Montserrat", sans-serif', category: 'Sans-serif', description: 'Urban, modern, geometric' },
   { name: 'Raleway', family: '"Raleway", sans-serif', category: 'Sans-serif', description: 'Elegant, thin weights available' },
-  { name: 'Poppins', family: '"Poppins", sans-serif', category: 'Sans-serif', description: 'Geometric, friendly, versatile' },
+  { name: 'Inter', family: '"Inter", sans-serif', category: 'Sans-serif', description: 'Clean, versatile, great for UI' },
+  { name: 'Sora', family: '"Sora", sans-serif', category: 'Sans-serif', description: 'Modern, geometric, highly legible' },
   { name: 'Cormorant Garamond', family: '"Cormorant Garamond", serif', category: 'Serif', description: 'Luxurious, sophisticated, display' },
   { name: 'DM Sans', family: '"DM Sans", sans-serif', category: 'Sans-serif', description: 'Low-contrast, geometric, modern' },
 ];
@@ -34,7 +34,7 @@ export default function FontKitPage() {
     <>
       {/* Load Google Fonts */}
       <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
       />
 
