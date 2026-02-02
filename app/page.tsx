@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import VideoSection from '@/components/VideoSection';
-import HowItWorks from '@/components/HowItWorks';
+import HowItWorksVariations from '@/components/HowItWorksVariations';
 import WhatWeDo from '@/components/WhatWeDo';
 import SeasonalPreview from '@/components/SeasonalPreview';
 import Testimonials from '@/components/Testimonials';
@@ -21,8 +21,8 @@ export default function HomePage() {
         {/* Hero - Full edge-to-edge with centered overlay */}
         <Hero />
 
-        {/* How It Works - Compact 3-step process */}
-        <HowItWorks />
+        {/* How It Works - 8 Design Variations for Client Selection */}
+        <HowItWorksVariations />
 
         {/* What We Do - Services overview */}
         <WhatWeDo />
