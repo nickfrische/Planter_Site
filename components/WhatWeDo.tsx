@@ -130,7 +130,7 @@ export default function WhatWeDo() {
   return (
     <section ref={sectionRef} className="w-full bg-cream-50 snap-start snap-always min-h-screen">
       {/* Title - centered with padding */}
-      <div className="container-padding max-w-[1600px] mx-auto pt-16 pb-8">
+      <div className="container-padding max-w-[1600px] mx-auto pt-24 md:pt-28 pb-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ export default function WhatWeDo() {
       </div>
 
       {/* Desktop Layout - 30% sidebar / 70% images */}
-      <div className="hidden lg:grid lg:grid-cols-[30%_70%] h-[calc(100vh-150px)]">
+      <div className="hidden lg:grid lg:grid-cols-[30%_70%] h-[calc(100vh-220px)]">
         {/* Sidebar - sticky */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}

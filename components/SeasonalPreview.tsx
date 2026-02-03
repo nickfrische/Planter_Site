@@ -102,7 +102,7 @@ export default function SeasonalPreview() {
   return (
     <section ref={sectionRef} className="w-full bg-white snap-start snap-always min-h-screen">
       {/* Title - centered with padding */}
-      <div className="container-padding max-w-[1600px] mx-auto pt-16 pb-8">
+      <div className="container-padding max-w-[1600px] mx-auto pt-24 md:pt-28 pb-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -114,7 +114,7 @@ export default function SeasonalPreview() {
       </div>
 
       {/* Desktop Layout - 70% images / 30% sidebar (flipped) */}
-      <div className="hidden lg:grid lg:grid-cols-[70%_30%] h-[calc(100vh-150px)]">
+      <div className="hidden lg:grid lg:grid-cols-[70%_30%] h-[calc(100vh-220px)]">
         {/* Season Cards - each takes full viewport height */}
         <div className="snap-y snap-mandatory overflow-y-scroll h-full scrollbar-hide">
           {seasons.map((season) => (
