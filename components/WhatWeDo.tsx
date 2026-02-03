@@ -88,11 +88,19 @@ export default function WhatWeDo() {
 
   // Observer for active service tracking
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveService(entry.target.getAttribute('data-service-id') || 'planters');
+            const serviceId = entry.target.getAttribute('data-service-id') || 'planters';
+
+            // Debounce state updates to reduce re-renders
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              setActiveService(serviceId);
+            }, 50);
           }
         });
       },
@@ -111,6 +119,7 @@ export default function WhatWeDo() {
     });
 
     return () => {
+      if (timeoutId) clearTimeout(timeoutId);
       observer.disconnect();
     };
   }, []);
@@ -220,6 +229,7 @@ export default function WhatWeDo() {
           className={`snap-y snap-mandatory h-full scrollbar-hide ${
             isScrollEnabled ? 'overflow-y-scroll' : 'overflow-hidden'
           }`}
+          style={{ WebkitOverflowScrolling: 'touch', willChange: 'scroll-position' }}
         >
           {services.map((service) => (
             <div

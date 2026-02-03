@@ -43,11 +43,19 @@ export default function SeasonalPreview() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSeason(entry.target.getAttribute('data-season-id') || 'spring');
+            const seasonId = entry.target.getAttribute('data-season-id') || 'spring';
+
+            // Debounce state updates to reduce re-renders
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+              setActiveSeason(seasonId);
+            }, 50);
           }
         });
       },
@@ -66,6 +74,7 @@ export default function SeasonalPreview() {
     });
 
     return () => {
+      if (timeoutId) clearTimeout(timeoutId);
       observer.disconnect();
     };
   }, []);
@@ -94,7 +103,10 @@ export default function SeasonalPreview() {
       {/* Desktop Layout - 70% images / 30% sidebar (flipped) */}
       <div className="hidden lg:grid lg:grid-cols-[70%_30%] h-[calc(100vh-220px)]">
         {/* Season Cards - each takes full viewport height */}
-        <div className="snap-y snap-mandatory overflow-y-scroll h-full scrollbar-hide">
+        <div
+          className="snap-y snap-mandatory overflow-y-scroll h-full scrollbar-hide"
+          style={{ WebkitOverflowScrolling: 'touch', willChange: 'scroll-position' }}
+        >
           {seasons.map((season) => (
             <div
               key={season.id}
