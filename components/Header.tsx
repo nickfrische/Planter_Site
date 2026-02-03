@@ -15,7 +15,6 @@ export default function Header() {
     { href: '/events-rentals', label: 'Events & Rentals' },
     { href: '/about', label: 'About Us' },
     { href: '/faq', label: 'FAQ' },
-    { href: '/fontkit', label: 'Font Kit', special: true },
   ];
 
   return (
@@ -40,17 +39,8 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
-                (link as { special?: boolean }).special
-                  ? 'text-forest-600 hover:text-forest-700 flex items-center gap-1'
-                  : 'text-gray-700 hover:text-forest-600'
-              }`}
+              className="text-sm font-medium text-gray-700 hover:text-forest-600 transition-colors"
             >
-              {(link as { special?: boolean }).special && (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              )}
               {link.label}
             </Link>
           ))}
@@ -106,18 +96,9 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors py-2 ${
-                    (link as { special?: boolean }).special
-                      ? 'text-forest-600 hover:text-forest-700 flex items-center gap-2'
-                      : 'text-gray-700 hover:text-forest-600'
-                  }`}
+                  className="text-sm font-medium text-gray-700 hover:text-forest-600 transition-colors py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {(link as { special?: boolean }).special && (
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                  )}
                   {link.label}
                 </Link>
               ))}
