@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: 'When or how can I cancel my subscription?',
-    answer: 'We strive for you to love your subscription service, but we realize sometimes a customer may need to cancel. If you need to cancel your plan, please just email us at Info@DSPlanter.com. Plans can be cancelled at anytime.',
+    answer: 'cancel-email',
   },
 ];
 
@@ -102,7 +102,17 @@ export default function FAQPreview() {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6 text-gray-700 leading-relaxed">
-                      {faq.answer}
+                      {faq.answer === 'cancel-email' ? (
+                        <>
+                          We strive for you to love your subscription service, but we realize sometimes a customer may need to cancel. If you need to cancel your plan, please just email us at{' '}
+                          <a href="mailto:Info@DSPlanter.com" className="text-forest-600 font-medium hover:text-forest-700 underline">
+                            Info@DSPlanter.com
+                          </a>
+                          . Plans can be cancelled at anytime.
+                        </>
+                      ) : (
+                        faq.answer
+                      )}
                     </div>
                   </motion.div>
                 )}
