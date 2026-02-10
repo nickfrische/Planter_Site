@@ -26,10 +26,6 @@ const faqs = [
     a: 'Don\'t worry about it! We take out all the guesswork. People usually kill plants because they choose the wrong plants for the space or neglect to care for them. We choose plants that are ideal for your growing conditions and provide you with simple care instructions each time we deliver. Still worried? We also offer maintenance packages so all you need to do is water. We take care of pruning, inspect/treat for insects and fungus, and even replace plants that happen to die.',
   },
   {
-    q: 'Do you offer a warranty on your plants?',
-    a: 'All plants are warrantied for 14 days from date of installation at your home or office. For customers who opt for a bi-weekly maintenance plan, plants are replaced in-season at no additional cost.',
-  },
-  {
     q: 'How do I know when my planter will be delivered or my seasonal plantings will take place?',
     a: 'We\'ll contact you at the beginning of each season to confirm when we\'ll be planting in your area and make any changes to your subscription. We will also follow-up with text messages the week before we arrive and when we are on the way!',
   },

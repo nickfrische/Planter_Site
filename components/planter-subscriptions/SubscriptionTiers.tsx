@@ -5,48 +5,75 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 
-const tiers = [
+interface SubItem {
+  text: string;
+}
+
+interface Feature {
+  text: string;
+  isHeader?: boolean;
+  subItems?: SubItem[];
+}
+
+interface Tier {
+  id: string;
+  name: string;
+  tagline: string;
+  features: Feature[];
+  popular: boolean;
+}
+
+const tiers: Tier[] = [
   {
     id: 'basic',
-    name: 'Basic',
+    name: 'BASIC',
     tagline: 'Essential Beauty',
     features: [
-      'Custom design',
-      'Premium plants and materials',
-      '4 Seasonal refreshes',
-      'Clean-up and removal of all debris',
+      { text: 'Custom design' },
+      { text: 'Premium plants and materials' },
+      { text: '4 Seasonal refreshes' },
+      { text: 'Clean-up and removal of all debris' },
     ],
     popular: false,
   },
   {
     id: 'enhanced',
-    name: 'Enhanced',
+    name: 'ENHANCED',
     tagline: 'Full-Service Care',
     features: [
-      'Everything in Basic plan',
-      'Bi-weekly Maintenance (May-Oct)',
-      'Deep Water: Thorough root soaking for all plants',
-      'Fertilize: Water-soluble fertilizer for beautiful blooms',
-      'Dead Head: Remove dead flowers to encourage blooming',
-      'Prune: Remove stray/wilting branches for balanced growth',
-      'Spray for Insects (organic): Examination and treatment',
-      'Spray for Disease (organic): Preventative fungus treatment',
-      'Replacement of Plants (as appropriate)',
+      { text: 'Everything in BASIC, plus bi-weekly maintenance' },
+      {
+        text: 'Bi-weekly maintenance includes:',
+        isHeader: true,
+        subItems: [
+          { text: 'Deep Water: Thorough root soaking for all plants' },
+          { text: 'Fertilize: Water-soluble fertilizer for beautiful blooms' },
+          { text: 'Dead Head: Remove dead flowers to encourage blooming' },
+          { text: 'Prune: Remove stray/wilting branches for balanced growth' },
+          { text: 'Spray for Insects (organic): Examination and treatment' },
+          { text: 'Spray for Disease (organic): Preventative fungus treatment' },
+          { text: 'Replacement of plants (as appropriate)' },
+        ]
+      },
     ],
     popular: true,
   },
   {
-    id: 'premium',
-    name: 'Premium',
+    id: 'ultimate',
+    name: 'ULTIMATE',
     tagline: 'Complete Package',
     features: [
-      'Everything in Enhanced plan',
-      'Irrigation System Included:',
-      '   • Custom designed and professionally installed',
-      '   • Adjustable drip system for each planter',
-      '   • Stand-alone or connected to existing system',
-      '   • Programmable daily schedule with seasonal adjustments',
-      'Seasonal Decor: Professional holiday and seasonal decorations',
+      { text: 'Everything in ENHANCED, plus irrigation' },
+      {
+        text: 'Irrigation system includes:',
+        isHeader: true,
+        subItems: [
+          { text: 'Custom designed and professionally installed' },
+          { text: 'Adjustable drip system for each planter' },
+          { text: 'Stand-alone or connected to existing system' },
+          { text: 'Programmable daily schedule with seasonal adjustments' },
+        ]
+      },
     ],
     popular: false,
   },
@@ -57,7 +84,7 @@ export default function SubscriptionTiers() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="tiers" ref={ref} className="w-full section-spacing bg-cream-50">
+    <section id="tiers" ref={ref} className="w-full section-spacing bg-forest-900">
       <div className="container-padding max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,8 +92,8 @@ export default function SubscriptionTiers() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-forest-900 mb-4">Choose Your Subscription</h2>
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+          <h2 className="text-white mb-4 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold">Choose Your Subscription</h2>
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
             Select the plan that best fits your needs for year-round beauty.
           </p>
         </motion.div>
@@ -79,28 +106,51 @@ export default function SubscriptionTiers() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className={`relative bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden ${
-                tier.popular ? 'ring-2 ring-forest-600' : ''
+                tier.popular ? 'ring-2 ring-white' : ''
               }`}
             >
               {tier.popular && (
                 <div className="absolute top-0 right-0 bg-forest-600 text-white text-xs font-bold px-4 py-2 rounded-bl-lg">
-                  MOST POPULAR
+                  RECOMMENDED
                 </div>
               )}
 
               <div className="p-8">
-                <h3 className="text-forest-900 text-2xl font-bold mb-2">{tier.name}</h3>
+                <h3 className="text-forest-900 text-2xl font-bold mb-2 tracking-wide">{tier.name}</h3>
                 <p className="text-gray-600 mb-6">{tier.tagline}</p>
 
                 <div className="mb-8">
-                  <div className="text-forest-900 text-lg font-semibold mb-2">What's Included:</div>
+                  <div className="text-forest-900 text-lg font-semibold mb-3">What's Included:</div>
                   <ul className="space-y-3">
                     {tier.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-forest-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-700">{feature}</span>
+                      <li key={i}>
+                        {feature.isHeader ? (
+                          <div>
+                            <div className="flex items-start gap-3">
+                              <svg className="w-5 h-5 text-forest-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                              <span className="text-forest-800 font-medium">{feature.text}</span>
+                            </div>
+                            {feature.subItems && (
+                              <ul className="mt-2 ml-8 space-y-1.5">
+                                {feature.subItems.map((subItem, j) => (
+                                  <li key={j} className="flex items-start gap-2">
+                                    <span className="text-forest-500 flex-shrink-0 mt-1">•</span>
+                                    <span className="text-gray-600 text-sm">{subItem.text}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        ) : (
+                          <div className="flex items-start gap-3">
+                            <svg className="w-5 h-5 text-forest-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-700">{feature.text}</span>
+                          </div>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -127,9 +177,9 @@ export default function SubscriptionTiers() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600 text-lg">
+          <p className="text-white/80 text-lg">
             Custom solutions available.{' '}
-            <Link href="/contact" className="text-forest-600 font-semibold hover:text-forest-700">
+            <Link href="/contact" className="text-white font-semibold hover:text-cream-100">
               Contact us
             </Link>{' '}
             for a personalized quote.
