@@ -43,7 +43,7 @@ const services = [
   {
     id: 'events',
     title: 'Events & Rentals',
-    description: 'Short-term planter solutions for parties, corporate events, real estate staging, and vacation rentals.',
+    description: 'Short-term planter and seasonal decor solutions for special events, real estate staging, and vacation rentals.',
     href: '/events-rentals',
     image: '/images/event-flower.webp',
     icon: (

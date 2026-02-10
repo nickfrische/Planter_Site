@@ -7,8 +7,8 @@ import BeforeAfterGallery from '@/components/BeforeAfterGallery';
 import FinalCTA from '@/components/FinalCTA';
 
 export const metadata = {
-  title: 'Events & Rentals | Planter Business',
-  description: 'Short-term planter solutions for parties, corporate events, real estate staging, and vacation rentals.',
+  title: 'Events & Rentals | Detroit Style Planter Company',
+  description: 'Short-term planter and seasonal decor solutions for special events, real estate staging, and vacation rentals.',
 };
 
 export default function EventsRentalsPage() {

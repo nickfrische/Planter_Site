@@ -6,16 +6,10 @@ import { useRef } from 'react';
 
 const useCases = [
   {
-    title: 'Private Events',
-    description: 'Weddings, parties, and celebrations',
-    details: 'Transform your venue with stunning planters for birthdays, anniversaries, graduations, and special gatherings.',
+    title: 'Special Events',
+    description: 'Parties, celebrations, and gatherings',
+    details: 'Transform your venue with stunning planters and seasonal decor for birthdays, anniversaries, graduations, and special occasions.',
     image: '/images/usecase-private.jpg',
-  },
-  {
-    title: 'Corporate Events',
-    description: 'Conferences, meetings, and company gatherings',
-    details: 'Professional planter displays for trade shows, product launches, corporate parties, and client events.',
-    image: '/images/usecase-corporate.jpg',
   },
   {
     title: 'Real Estate Staging',
@@ -28,18 +22,6 @@ const useCases = [
     description: 'Airbnb, VRBO, and short-term properties',
     details: 'Maintain attractive curb appeal year-round with seasonal planter rotations for your rental property.',
     image: '/images/usecase-vacation.jpg',
-  },
-  {
-    title: 'Photo & Film',
-    description: 'Shoots and productions',
-    details: 'Rental planters for photography sessions, commercials, and video productions requiring temporary greenery.',
-    image: '/images/usecase-photo.jpg',
-  },
-  {
-    title: 'Pop-Up Retail',
-    description: 'Temporary stores and markets',
-    details: 'Create inviting outdoor spaces for farmers markets, festivals, and temporary retail locations.',
-    image: '/images/usecase-retail.jpg',
   },
 ];
 

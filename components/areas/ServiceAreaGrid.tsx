@@ -6,18 +6,26 @@ import { useRef } from 'react';
 import Link from 'next/link';
 
 const areas = [
+  { name: 'Addison Township', slug: 'addison-township' },
+  { name: 'Ann Arbor', slug: 'ann-arbor' },
   { name: 'Birmingham', slug: 'birmingham' },
   { name: 'Bloomfield Hills', slug: 'bloomfield-hills' },
-  { name: 'Grosse Pointe', slug: 'grosse-pointe' },
-  { name: 'Royal Oak', slug: 'royal-oak' },
-  { name: 'Troy', slug: 'troy' },
-  { name: 'Rochester', slug: 'rochester' },
-  { name: 'Novi', slug: 'novi' },
-  { name: 'Plymouth', slug: 'plymouth' },
-  { name: 'Northville', slug: 'northville' },
-  { name: 'Farmington Hills', slug: 'farmington-hills' },
-  { name: 'West Bloomfield', slug: 'west-bloomfield' },
   { name: 'Clarkston', slug: 'clarkston' },
+  { name: 'Farmington Hills', slug: 'farmington-hills' },
+  { name: 'Grosse Pointe', slug: 'grosse-pointe' },
+  { name: 'Lake Orion', slug: 'lake-orion' },
+  { name: 'Metamora', slug: 'metamora' },
+  { name: 'Northville', slug: 'northville' },
+  { name: 'Novi', slug: 'novi' },
+  { name: 'Oakland County', slug: 'oakland-county' },
+  { name: 'Oakland Township', slug: 'oakland-township' },
+  { name: 'Plymouth', slug: 'plymouth' },
+  { name: 'Rochester', slug: 'rochester' },
+  { name: 'Rochester Hills', slug: 'rochester-hills' },
+  { name: 'Royal Oak', slug: 'royal-oak' },
+  { name: 'Springfield', slug: 'springfield' },
+  { name: 'Troy', slug: 'troy' },
+  { name: 'West Bloomfield', slug: 'west-bloomfield' },
 ];
 
 export default function ServiceAreaGrid() {

@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     question: 'When or how can I cancel my subscription?',
-    answer: 'We strive for you to love your subscription service, but we realize sometimes a customer may need to cancel. If you need to cancel your plan, please just email us at Info@Dnter.com. Plans can be cancelled at anytime.',
+    answer: 'We strive for you to love your subscription service, but we realize sometimes a customer may need to cancel. If you need to cancel your plan, please just email us at Info@DSPlanter.com. Plans can be cancelled at anytime.',
   },
 ];
 
