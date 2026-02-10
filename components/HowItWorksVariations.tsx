@@ -40,8 +40,8 @@ function Option1() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
-            WE MAKE IT EASY
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 tracking-wide text-gray-900 leading-tight break-words hyphens-none uppercase">
+            We Make It Easy
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 1: Centered</p>
         </motion.div>
@@ -109,8 +109,8 @@ function Option2() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 tracking-tight text-gray-900 leading-tight break-words hyphens-none">
-            WE MAKE IT EASY
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 tracking-wide text-gray-900 leading-tight break-words hyphens-none uppercase">
+            We Make It Easy
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 2: Left Justified</p>
         </motion.div>

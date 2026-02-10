@@ -57,7 +57,7 @@ export default function FAQPreview() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-forest-900 mb-16 text-3xl sm:text-4xl md:text-5xl leading-tight break-words hyphens-none"
+          className="text-center text-forest-900 mb-16 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
         >
           Common Questions
         </motion.h2>

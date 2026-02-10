@@ -139,7 +139,7 @@ export default function WhatWeDo() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-forest-900 text-3xl sm:text-4xl md:text-5xl leading-tight break-words hyphens-none"
+          className="text-center text-forest-900 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
         >
           What We Do
         </motion.h2>
@@ -260,7 +260,7 @@ export default function WhatWeDo() {
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[var(--font-poppins)] font-bold tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.25em] uppercase flex items-center gap-4 leading-tight break-words hyphens-none">
+                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-4 leading-tight break-words hyphens-none">
                     <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                       {service.iconSrc ? (
                         <Image
@@ -274,7 +274,7 @@ export default function WhatWeDo() {
                         service.icon
                       )}
                     </div>
-                    {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
+                    {service.title}
                     <svg className="w-8 h-8 lg:w-10 lg:h-10 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -317,7 +317,7 @@ export default function WhatWeDo() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-xl sm:text-2xl font-[var(--font-poppins)] font-bold tracking-[0.1em] sm:tracking-[0.12em] uppercase flex items-center gap-3 leading-tight break-words hyphens-none">
+                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-lg sm:text-xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-3 leading-tight break-words hyphens-none">
                   <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     {service.iconSrc ? (
                       <Image
@@ -331,7 +331,7 @@ export default function WhatWeDo() {
                       service.icon
                     )}
                   </div>
-                  {service.title.split(' ').map(word => word.split('').join(' ')).join('  ·  ')}
+                  {service.title}
                   <svg className="w-6 h-6 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

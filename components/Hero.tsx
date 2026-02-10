@@ -40,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight break-words hyphens-none"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.3)' }}
           >
             Your Private Gardener
@@ -53,7 +53,7 @@ export default function Hero() {
             className="text-base sm:text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed break-words"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
           >
-            Planters and seasonal outdoor décor designed and installed at your home or business to celebrate the beauty of every season.
+            Planter subscriptions and seasonal outdoor décor designed and installed at your home or business to celebrate the beauty of every season.
           </motion.p>
 
           <motion.div

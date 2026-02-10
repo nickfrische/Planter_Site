@@ -63,14 +63,14 @@ export default function FAQList() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-forest-900 mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-forest-900 mb-4 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold">Frequently Asked Questions</h2>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-4"
+          className="space-y-3"
         >
           {faqs.map((faq, index) => {
             const isOpen = openItems.has(index);
@@ -78,22 +78,22 @@ export default function FAQList() {
             return (
               <div
                 key={index}
-                className="bg-cream-50 rounded-lg overflow-hidden"
+                className="bg-white rounded-lg border border-gray-200 overflow-hidden"
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full flex items-start justify-between p-6 text-left hover:bg-cream-100 transition-colors"
+                  className="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors"
                 >
-                  <span className="text-forest-900 font-semibold pr-8">{faq.q}</span>
+                  <span className="text-base sm:text-lg font-semibold text-gray-900 pr-4 leading-snug break-words hyphens-none">{faq.q}</span>
                   <svg
-                    className={`w-6 h-6 text-forest-600 flex-shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180' : ''
+                    className={`w-5 h-5 text-forest-600 flex-shrink-0 transition-transform duration-300 ${
+                      isOpen ? 'rotate-45' : ''
                     }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
                 </button>
 
@@ -103,7 +103,7 @@ export default function FAQList() {
                   }`}
                 >
                   <div className="px-6 pb-6">
-                    <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                    <p className="text-gray-700 leading-relaxed">{faq.a}</p>
                   </div>
                 </div>
               </div>
