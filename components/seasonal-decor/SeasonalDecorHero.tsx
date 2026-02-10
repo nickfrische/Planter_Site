@@ -14,8 +14,8 @@ export default function SeasonalDecorHero() {
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
-      <div className="relative z-10 min-h-[90vh] flex items-center">
-        <div className="container-padding max-w-[1400px] mx-auto w-full py-20">
+      <div className="relative z-10 min-h-[90vh] flex items-end">
+        <div className="container-padding max-w-[1400px] mx-auto w-full pb-40 pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

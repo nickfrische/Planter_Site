@@ -14,8 +14,8 @@ export default function IrrigationHero() {
       
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
-      <div className="relative z-10 min-h-[90vh] flex items-center">
-        <div className="container-padding max-w-[1400px] mx-auto w-full py-20">
+      <div className="relative z-10 min-h-[90vh] flex items-end">
+        <div className="container-padding max-w-[1400px] mx-auto w-full pb-40 pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function IrrigationHero() {
                 href="/contact"
                 className="px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
               >
-                Get a Quote
+                Request a Quote
               </Link>
             </motion.div>
           </motion.div>

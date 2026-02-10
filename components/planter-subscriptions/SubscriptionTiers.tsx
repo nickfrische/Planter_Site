@@ -36,8 +36,8 @@ const tiers = [
     popular: true,
   },
   {
-    id: 'ultimate',
-    name: 'Ultimate',
+    id: 'premium',
+    name: 'Premium',
     tagline: 'Complete Package',
     features: [
       'Everything in Enhanced plan',

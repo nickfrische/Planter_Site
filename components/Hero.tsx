@@ -64,7 +64,7 @@ export default function Hero() {
           >
             <Link
               href="#how-it-works"
-              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white text-sm sm:text-base font-medium rounded-md hover:bg-white/25 transition-all text-center shadow-lg whitespace-nowrap"
+              className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/25 transition-all text-center shadow-lg whitespace-nowrap"
             >
               See How It Works
             </Link>
