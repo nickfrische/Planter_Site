@@ -78,67 +78,67 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Areas We Serve</h4>
             <ul className="space-y-2.5">
               <li>
-                <Link href="/areas/addison-township" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Addison Township
                 </Link>
               </li>
               <li>
-                <Link href="/areas/ann-arbor" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Ann Arbor
                 </Link>
               </li>
               <li>
-                <Link href="/areas/birmingham" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Birmingham
                 </Link>
               </li>
               <li>
-                <Link href="/areas/bloomfield-hills" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Bloomfield Hills
                 </Link>
               </li>
               <li>
-                <Link href="/areas/grosse-pointe" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Grosse Pointe
                 </Link>
               </li>
               <li>
-                <Link href="/areas/lake-orion" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Lake Orion
                 </Link>
               </li>
               <li>
-                <Link href="/areas/metamora" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Metamora
                 </Link>
               </li>
               <li>
-                <Link href="/areas/oakland-county" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Oakland County
                 </Link>
               </li>
               <li>
-                <Link href="/areas/oakland-township" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Oakland Township
                 </Link>
               </li>
               <li>
-                <Link href="/areas/rochester-hills" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Rochester Hills
                 </Link>
               </li>
               <li>
-                <Link href="/areas/royal-oak" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Royal Oak
                 </Link>
               </li>
               <li>
-                <Link href="/areas/springfield" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Springfield
                 </Link>
               </li>
               <li>
-                <Link href="/areas/troy" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
                   Troy
                 </Link>
               </li>
