@@ -42,8 +42,8 @@ export default function ContactInfo() {
             </div>
             <div>
               <h3 className="text-forest-900 font-bold mb-1">Email</h3>
-              <a href="mailto:hello@planterbusiness.com" className="text-gray-600 hover:text-forest-600 transition-colors">
-                hello@planterbusiness.com
+              <a href="mailto:Info@DSPlanter.com" className="text-gray-600 hover:text-forest-600 transition-colors">
+              Info@DSPlanter.com
               </a>
             </div>
           </div>

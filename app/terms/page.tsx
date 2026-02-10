@@ -69,7 +69,7 @@ export default function TermsPage() {
               Questions about these terms? Contact us at:
             </p>
             <p className="text-gray-600">
-              Email: <a href="mailto:hello@planterbusiness.com" className="text-forest-600 hover:text-forest-700">hello@planterbusiness.com</a><br />
+              Email: <a href="mailto:Info@DSPlanter.com" className="text-forest-600 hover:text-forest-700">Info@DSPlanter.com</a><br />
               Phone: <a href="tel:+12485550123" className="text-forest-600 hover:text-forest-700">(248) 555-0123</a>
             </p>
           </div>
