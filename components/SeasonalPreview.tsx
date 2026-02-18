@@ -1,18 +1,16 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 // Helper function to add letter spacing to labels
-// For single words: "SPRING" -> "S P R I N G"
-// For multi-word: "PLANTER SUBSCRIPTIONS" -> "P L A N T E R · S U B S C R I P T I O N S"
 const formatWithLetterSpacing = (text: string): string => {
   return text
     .split(' ')
     .map(word => word.split('').join(' '))
-    .join('  ·  '); // Middle dot between words
+    .join('  ·  ');
 };
 
 const seasons = [
@@ -48,10 +46,34 @@ const seasons = [
 
 export default function SeasonalPreview() {
   const [activeSeason, setActiveSeason] = useState('spring');
-  const sectionRef = useRef(null);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const seasonRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
 
+  // Observer to show/hide sidebar based on section visibility
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setSidebarVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (sectionRef.current) {
+      sectionObserver.observe(sectionRef.current);
+    }
+
+    return () => {
+      sectionObserver.disconnect();
+    };
+  }, []);
+
+  // Observer for active season tracking
   useEffect(() => {
     let timeoutId: NodeJS.Timeout | null = null;
 
@@ -60,8 +82,6 @@ export default function SeasonalPreview() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const seasonId = entry.target.getAttribute('data-season-id') || 'spring';
-
-            // Debounce state updates to reduce re-renders
             if (timeoutId) clearTimeout(timeoutId);
             timeoutId = setTimeout(() => {
               setActiveSeason(seasonId);
@@ -70,8 +90,8 @@ export default function SeasonalPreview() {
         });
       },
       {
-        threshold: 0,
-        rootMargin: '-50% 0px -50% 0px' // Triggers when element crosses center of viewport
+        threshold: 0.5,
+        rootMargin: '0px'
       }
     );
 
@@ -97,170 +117,120 @@ export default function SeasonalPreview() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-white snap-start snap-always min-h-screen">
-      {/* Title - centered with padding */}
-      <div className="container-padding max-w-[1600px] mx-auto pt-24 md:pt-28 pb-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-forest-900 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
-        >
-          ALWAYS IN SEASON
-        </motion.h2>
-      </div>
-
-      {/* Desktop Layout - 70% images / 30% sidebar (flipped) */}
-      <div className="hidden lg:grid lg:grid-cols-[70%_30%] h-[calc(100vh-220px)]">
-        {/* Season Cards - each takes full viewport height */}
-        <div
-          className="snap-y snap-mandatory overflow-y-scroll h-full scrollbar-hide"
-          style={{ WebkitOverflowScrolling: 'touch', willChange: 'scroll-position' }}
-        >
-          {seasons.map((season) => (
-            <div
-              key={season.id}
-              ref={(el) => {
-                seasonRefs.current[season.id] = el;
-              }}
-              className="h-full snap-start snap-always"
-            >
-              <div
-                className="group block relative h-full overflow-hidden rounded-r-2xl bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${season.image})` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                {/* Bottom content */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[var(--font-jost)] font-semibold uppercase flex items-center gap-4 leading-tight">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                      {season.iconSrc && (
-                        <Image
-                          src={season.iconSrc}
-                          alt={season.label}
-                          width={56}
-                          height={56}
-                          className="w-10 h-10 lg:w-12 lg:h-12 brightness-0 invert"
-                        />
-                      )}
-                    </div>
-                    <span className="tracking-[0.3em]">{formatWithLetterSpacing(season.label)}</span>
-                  </h3>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Sidebar - sticky on RIGHT */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-          transition={{ duration: 0.7 }}
-          className="sticky top-20 h-full flex flex-col justify-center pl-8 pr-8 xl:pr-16 space-y-6"
-        >
-          {seasons.map((season) => (
-            <button
-              key={season.id}
-              onClick={() => scrollToSeason(season.id)}
-              className={`w-full text-right group transition-all duration-300 ${
-                activeSeason === season.id ? '' : 'opacity-40 hover:opacity-60'
-              }`}
-            >
-              <div className="flex items-start gap-4 flex-row-reverse">
-                <div
-                  className={`flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    activeSeason === season.id
-                      ? 'w-14 h-14 bg-forest-600 text-white'
-                      : 'w-12 h-12 bg-white border-2 border-gray-200 text-forest-700'
-                  }`}
-                >
-                  <div className={activeSeason === season.id ? 'scale-110' : ''}>
-                    <Image
-                      src={season.iconSrc}
-                      alt={season.label}
-                      width={32}
-                      height={32}
-                      className={`w-8 h-8 transition-all duration-300 ${
-                        activeSeason === season.id
-                          ? 'brightness-0 invert'
-                          : ''
-                      }`}
-                      style={activeSeason === season.id ? {} : { filter: 'invert(35%) sepia(18%) saturate(1000%) hue-rotate(109deg) brightness(95%) contrast(92%)' }}
-                    />
-                  </div>
-                </div>
-                <div className="flex-1 text-right">
-                  <h3
-                    className={`font-[var(--font-jost)] transition-all duration-300 ${
-                      activeSeason === season.id
-                        ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
-                        : 'text-xl font-semibold text-gray-600 mb-0'
-                    }`}
-                  >
-                    {season.label}
-                  </h3>
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      activeSeason === season.id
-                        ? 'max-h-32 opacity-100'
-                        : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    <p className="text-base text-gray-600 leading-relaxed">
-                      {season.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                className={`mt-4 mr-18 h-1 rounded-full transition-all duration-300 ml-auto ${
-                  activeSeason === season.id
-                    ? 'bg-forest-600 w-16'
-                    : 'bg-gray-200 w-8'
-                }`}
-              />
-            </button>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Mobile Full-Screen Cards */}
-      <div className="lg:hidden">
-        {seasons.map((season, index) => (
+    <section ref={sectionRef} className="w-full relative">
+      {/* Desktop Sidebar - Fixed position on RIGHT, only visible when section is in view */}
+      <AnimatePresence>
+        {sidebarVisible && (
           <motion.div
-            key={season.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative min-h-screen h-screen snap-start snap-always overflow-hidden group bg-cover bg-center bg-no-repeat"
-            style={{ minHeight: '100svh', height: '100svh', backgroundImage: `url(${season.image})` }}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 30 }}
+            transition={{ duration: 0.3 }}
+            className="hidden lg:flex fixed right-0 top-0 h-screen w-[350px] xl:w-[400px] z-20 flex-col justify-center pr-8 xl:pr-16 pl-8 bg-gradient-to-l from-black/60 via-black/40 to-transparent pointer-events-none"
           >
-            <div className="block relative w-full h-full">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-              {/* Bottom content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-[var(--font-jost)] font-semibold uppercase flex items-center gap-3 leading-tight break-words">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                    {season.iconSrc && (
-                      <Image
-                        src={season.iconSrc}
-                        alt={season.label}
-                        width={48}
-                        height={48}
-                        className="w-8 h-8 sm:w-10 sm:h-10 brightness-0 invert"
-                      />
-                    )}
-                  </div>
-                  <span className="tracking-[0.2em]">{formatWithLetterSpacing(season.label)}</span>
-                </h3>
+            <div className="pointer-events-auto">
+              <h2 className="text-white text-2xl xl:text-3xl font-semibold uppercase tracking-wide mb-10 text-right">
+                ALWAYS IN SEASON
+              </h2>
+              <div className="space-y-6">
+                {seasons.map((season) => (
+                  <button
+                    key={season.id}
+                    onClick={() => scrollToSeason(season.id)}
+                    className={`w-full text-right group transition-all duration-300 ${
+                      activeSeason === season.id ? '' : 'opacity-50 hover:opacity-70'
+                    }`}
+                  >
+                    <div className="flex items-start gap-4 flex-row-reverse">
+                      <div
+                        className={`flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          activeSeason === season.id
+                            ? 'w-12 h-12 bg-white'
+                            : 'w-10 h-10 bg-white/20'
+                        }`}
+                      >
+                        <div className={activeSeason === season.id ? 'scale-110' : ''}>
+                          <Image
+                            src={season.iconSrc}
+                            alt={season.label}
+                            width={28}
+                            height={28}
+                            className={`w-7 h-7 transition-all duration-300 ${
+                              activeSeason === season.id ? '' : 'brightness-0 invert'
+                            }`}
+                            style={activeSeason === season.id ? { filter: 'invert(35%) sepia(18%) saturate(1000%) hue-rotate(109deg) brightness(95%) contrast(92%)' } : {}}
+                          />
+                        </div>
+                      </div>
+                      <div className="flex-1 text-right">
+                        <h3
+                          className={`font-[var(--font-jost)] transition-all duration-300 leading-tight ${
+                            activeSeason === season.id
+                              ? 'text-xl xl:text-2xl font-bold text-white mb-2'
+                              : 'text-lg font-semibold text-white/80 mb-0'
+                          }`}
+                        >
+                          {season.label}
+                        </h3>
+                        <div
+                          className={`overflow-hidden transition-all duration-300 ${
+                            activeSeason === season.id
+                              ? 'max-h-24 opacity-100'
+                              : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <p className="text-sm text-white/70 leading-relaxed">
+                            {season.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
           </motion.div>
-        ))}
-      </div>
+        )}
+      </AnimatePresence>
+
+      {/* Full-Screen Season Cards */}
+      {seasons.map((season, index) => (
+        <div
+          key={season.id}
+          ref={(el) => {
+            seasonRefs.current[season.id] = el;
+          }}
+          className="relative min-h-screen h-screen snap-start snap-always overflow-hidden"
+          style={{ minHeight: '100svh', height: '100svh' }}
+        >
+          <div
+            className="block relative w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${season.image})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            {/* Extra gradient on right for desktop sidebar readability */}
+            <div className="hidden lg:block absolute inset-0 bg-gradient-to-l from-black/50 via-transparent to-transparent" />
+
+            {/* Bottom content - positioned bottom left */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 lg:pr-[400px] xl:pr-[450px]">
+              <div className="flex items-center gap-3 lg:gap-6">
+                <div className="w-10 h-10 lg:w-20 lg:h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src={season.iconSrc}
+                    alt={season.label}
+                    width={64}
+                    height={64}
+                    className="w-8 h-8 lg:w-14 lg:h-14 brightness-0 invert"
+                  />
+                </div>
+                <h3 className="text-white text-lg sm:text-xl lg:text-7xl xl:text-8xl font-[var(--font-jost)] font-semibold uppercase leading-tight tracking-[0.15em]">
+                  {formatWithLetterSpacing(season.label)}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
     </section>
   );
 }
