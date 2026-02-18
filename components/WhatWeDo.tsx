@@ -283,7 +283,7 @@ export default function WhatWeDo() {
 
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
                   <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-4 leading-tight break-words hyphens-none">
-                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0 text-white">
                       {service.iconSrc ? (
                         <Image
                           src={service.iconSrc}
@@ -293,7 +293,7 @@ export default function WhatWeDo() {
                           className="w-8 h-8 lg:w-10 lg:h-10 brightness-0 invert"
                         />
                       ) : (
-                        service.icon
+                        <span className="[&>svg]:w-6 [&>svg]:h-6 [&>svg]:stroke-white">{service.icon}</span>
                       )}
                     </div>
                     <span className="tracking-[0.2em]">{formatWithLetterSpacing(service.title)}</span>
@@ -337,7 +337,7 @@ export default function WhatWeDo() {
 
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0 text-white">
                     {service.iconSrc ? (
                       <Image
                         src={service.iconSrc}
@@ -347,7 +347,7 @@ export default function WhatWeDo() {
                         className="w-8 h-8 brightness-0 invert"
                       />
                     ) : (
-                      service.icon
+                      <span className="[&>svg]:w-6 [&>svg]:h-6 [&>svg]:stroke-white">{service.icon}</span>
                     )}
                   </div>
                   <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-lg sm:text-xl font-[var(--font-poppins)] font-semibold uppercase leading-tight">
