@@ -195,7 +195,7 @@ export default function HomePage() {
             <div className="flex flex-col justify-center">
               <span>OUR STORY</span>
               <h2>Meet Brian & Eliza</h2>
-              <p>We started Outdoor Décor by Eli to bring beautiful planters to Detroit-area homes—while creating flexible jobs for our community.</p>
+              <p>We started Detroit Style Planter Company to bring beautiful planters to Detroit-area homes—while creating flexible jobs for our community.</p>
               <a href="/about">Learn More About Us →</a>
             </div>
           </div>
@@ -361,7 +361,7 @@ export default function HomePage() {
           </div>
           {/* Bottom */}
           <div className="flex justify-between items-center mt-12 pt-8 border-t">
-            <p>© 2026 Outdoor Décor by Eli</p>
+            <p>© 2026 DS Planter Company</p>
             <div className="flex gap-4">
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>

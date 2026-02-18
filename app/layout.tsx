@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://dsplanter.com'),
   title: 'Planter Business | Your Private Gardener',
   description: 'Professional seasonal planters, designed and installed for you. Serving the Detroit metro area with planter subscriptions, seasonal decor, irrigation, and maintenance services.',
-  keywords: 'planter subscriptions, seasonal planters, outdoor decor, Detroit landscaping, container gardening, seasonal decor, irrigation, plant maintenance',
+  keywords: 'planter subscriptions, seasonal planters, seasonal decor, Detroit landscaping, container gardening, seasonal decor, irrigation, plant maintenance',
   themeColor: '#267854',
   icons: {
     icon: '/images/logo.png',
