@@ -9,11 +9,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '/planter-subscriptions', label: 'Planter Subscriptions' },
-    { href: '/seasonal-decor', label: 'Seasonal Decor' },
-    { href: '/irrigation', label: 'Irrigation' },
-    { href: '/events-rentals', label: 'Events & Rentals' },
-    { href: '/about', label: 'About Us' },
+    { href: '/planter-subscriptions', label: 'PLANTER SUBSCRIPTIONS' },
+    { href: '/seasonal-decor', label: 'SEASONAL DECOR' },
+    { href: '/irrigation', label: 'IRRIGATION' },
+    { href: '/events-rentals', label: 'EVENTS & RENTALS' },
+    { href: '/about', label: 'ABOUT US' },
     { href: '/faq', label: 'FAQ' },
   ];
 
@@ -50,7 +50,7 @@ export default function Header() {
           href="/contact"
           className="hidden lg:block px-6 py-2.5 bg-forest-600 text-white font-medium rounded-md hover:bg-forest-700 transition-colors"
         >
-          Contact
+          CONTACT
         </Link>
 
         <button
@@ -107,7 +107,7 @@ export default function Header() {
                 className="mt-2 px-6 py-2.5 bg-forest-600 text-white font-medium rounded-md hover:bg-forest-700 transition-colors text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                CONTACT
               </Link>
             </nav>
           </motion.div>

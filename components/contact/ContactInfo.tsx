@@ -17,7 +17,7 @@ export default function ContactInfo() {
       className="space-y-8"
     >
       <div>
-        <h2 className="text-forest-900 text-3xl font-bold mb-6">Contact Information</h2>
+        <h2 className="text-forest-900 text-3xl font-bold mb-6">CONTACT INFORMATION</h2>
         
         <div className="space-y-6">
           <div className="flex items-start gap-4">
@@ -27,7 +27,7 @@ export default function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h3 className="text-forest-900 font-bold mb-1">Phone</h3>
+              <h3 className="text-forest-900 font-bold mb-1">PHONE</h3>
               <a href="tel:+12485550123" className="text-gray-600 hover:text-forest-600 transition-colors">
                 (248) 555-0123
               </a>
@@ -41,7 +41,7 @@ export default function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h3 className="text-forest-900 font-bold mb-1">Email</h3>
+              <h3 className="text-forest-900 font-bold mb-1">EMAIL</h3>
               <a href="mailto:Info@DSPlanter.com" className="text-gray-600 hover:text-forest-600 transition-colors">
               Info@DSPlanter.com
               </a>
@@ -56,7 +56,7 @@ export default function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h3 className="text-forest-900 font-bold mb-1">Service Area</h3>
+              <h3 className="text-forest-900 font-bold mb-1">SERVICE AREA</h3>
               <p className="text-gray-600">
                 Greater Detroit Metro<br />
                 Birmingham, Bloomfield Hills,<br />
@@ -72,7 +72,7 @@ export default function ContactInfo() {
               </svg>
             </div>
             <div>
-              <h3 className="text-forest-900 font-bold mb-1">Hours</h3>
+              <h3 className="text-forest-900 font-bold mb-1">HOURS</h3>
               <p className="text-gray-600">
                 Monday - Friday: 8am - 6pm<br />
                 Saturday: 9am - 4pm<br />
@@ -84,14 +84,14 @@ export default function ContactInfo() {
       </div>
 
       <div className="bg-cream-50 rounded-lg p-8">
-        <h3 className="text-forest-900 font-bold mb-3">Response Time</h3>
+        <h3 className="text-forest-900 font-bold mb-3">RESPONSE TIME</h3>
         <p className="text-gray-600 leading-relaxed">
           We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call us directly.
         </p>
       </div>
 
       <div className="bg-forest-50 rounded-lg p-8">
-        <h3 className="text-forest-900 font-bold mb-3">What Happens Next?</h3>
+        <h3 className="text-forest-900 font-bold mb-3">WHAT HAPPENS NEXT?</h3>
         <ol className="space-y-3">
           <li className="flex items-start gap-3">
             <span className="flex-shrink-0 w-6 h-6 rounded-full bg-forest-600 text-white text-sm flex items-center justify-center font-bold">1</span>

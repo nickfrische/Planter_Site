@@ -6,20 +6,20 @@ import { useRef } from 'react';
 
 const useCases = [
   {
-    title: 'Special Events',
-    description: 'Parties, celebrations, and gatherings',
+    title: 'SPECIAL EVENTS',
+    description: 'PARTIES, CELEBRATIONS, AND GATHERINGS',
     details: 'Transform your venue with stunning planters and seasonal decor for birthdays, anniversaries, graduations, and special occasions.',
     image: '/images/usecase-private.jpg',
   },
   {
-    title: 'Real Estate Staging',
-    description: 'Home sales and open houses',
+    title: 'REAL ESTATE STAGING',
+    description: 'HOME SALES AND OPEN HOUSES',
     details: 'Boost curb appeal with beautiful seasonal planters that help homes sell faster and for higher prices.',
     image: '/images/usecase-staging.jpg',
   },
   {
-    title: 'Vacation Rentals',
-    description: 'Airbnb, VRBO, and short-term properties',
+    title: 'VACATION RENTALS',
+    description: 'AIRBNB, VRBO, AND SHORT-TERM PROPERTIES',
     details: 'Maintain attractive curb appeal year-round with seasonal planter rotations for your rental property.',
     image: '/images/usecase-vacation.jpg',
   },
@@ -38,7 +38,7 @@ export default function UseCases() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-forest-900 mb-4">Perfect For</h2>
+          <h2 className="text-forest-900 mb-4">PERFECT FOR</h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             Flexible rental periods from days to months
           </p>
@@ -73,7 +73,7 @@ export default function UseCases() {
           className="text-center mt-12"
         >
           <div className="inline-block bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-forest-900 text-xl font-bold mb-3">Rental Includes</h3>
+            <h3 className="text-forest-900 text-xl font-bold mb-3">RENTAL INCLUDES</h3>
             <ul className="text-left space-y-2">
               <li className="flex items-start gap-2">
                 <svg className="w-5 h-5 text-forest-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

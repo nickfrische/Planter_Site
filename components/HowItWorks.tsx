@@ -7,20 +7,20 @@ import { useRef } from 'react';
 const steps = [
   {
     number: '1',
-    title: 'Schedule Design Consultation',
-    description: 'Connect with our team to discuss your vision and space',
+    title: 'SCHEDULE DESIGN CONSULTATION',
+    description: 'Connect with our team to discuss your vision and space.',
     image: '/images/potted_plants_patio_pool.webp',
   },
   {
     number: '2',
-    title: 'Make Your Selections',
-    description: 'Choose from curated options tailored to your style',
+    title: 'MAKE YOUR SELECTIONS',
+    description: 'Choose from curated options tailored to your style.',
     image: '/images/seasonal-decor.jpeg',
   },
   {
     number: '3',
-    title: 'Custom On-Site Installation',
-    description: 'We bring your vision to life with professional installation',
+    title: 'CUSTOM ON-SITE INSTALLATION',
+    description: 'We bring your vision to life with professional installation.',
     image: '/images/fall_planter.jpg',
   },
 ];

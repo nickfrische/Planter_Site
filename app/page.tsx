@@ -33,8 +33,8 @@ export default function HomePage() {
         {/* Video Section - Full-width explainer video */}
         <VideoSection
           videoId="dQw4w9WgXcQ"
-          title="See How We Transform Your Space"
-          subtitle="Watch our process from consultation to installation"
+          title="SEE HOW WE TRANSFORM YOUR SPACE"
+          subtitle="Watch our process from consultation to installation."
         />
 
         {/* Testimonials - Multi-card carousel */}

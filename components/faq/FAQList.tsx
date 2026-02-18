@@ -59,7 +59,7 @@ export default function FAQList() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-forest-900 mb-4 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold">Frequently Asked Questions</h2>
+          <h2 className="text-forest-900 mb-4 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold">FREQUENTLY ASKED QUESTIONS</h2>
         </motion.div>
 
         <motion.div
@@ -125,7 +125,7 @@ export default function FAQList() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16 p-8 bg-forest-50 rounded-lg"
         >
-          <h3 className="text-forest-900 text-xl font-bold mb-3">Still have questions?</h3>
+          <h3 className="text-forest-900 text-xl font-bold mb-3">STILL HAVE QUESTIONS?</h3>
           <p className="text-gray-600 mb-6">
             We're here to help. Reach out and we'll get back to you quickly.
           </p>
@@ -133,7 +133,7 @@ export default function FAQList() {
             href="/contact"
             className="inline-block px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors"
           >
-            Contact Us
+            CONTACT US
           </a>
         </motion.div>
       </div>

@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <main className="pt-[72px]">
         <div className="w-full bg-gradient-to-b from-forest-900 to-forest-800 py-16">
           <div className="container-padding max-w-[900px] mx-auto">
-            <h1 className="text-white">Privacy Policy</h1>
+            <h1 className="text-white">PRIVACY POLICY</h1>
           </div>
         </div>
 
@@ -24,12 +24,12 @@ export default function PrivacyPage() {
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
 
-            <h2 className="text-forest-900">Information We Collect</h2>
+            <h2 className="text-forest-900">INFORMATION WE COLLECT</h2>
             <p className="text-gray-600">
               We collect information you provide directly to us when you request a consultation, sign up for our services, or contact us. This may include your name, email address, phone number, property address, and service preferences.
             </p>
 
-            <h2 className="text-forest-900">How We Use Your Information</h2>
+            <h2 className="text-forest-900">HOW WE USE YOUR INFORMATION</h2>
             <p className="text-gray-600">
               We use the information we collect to:
             </p>
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               <li>Send you marketing communications (with your consent)</li>
             </ul>
 
-            <h2 className="text-forest-900">Information Sharing</h2>
+            <h2 className="text-forest-900">INFORMATION SHARING</h2>
             <p className="text-gray-600">
               We do not sell, trade, or rent your personal information to third parties. We may share your information with:
             </p>
@@ -51,12 +51,12 @@ export default function PrivacyPage() {
               <li>Law enforcement when required by law</li>
             </ul>
 
-            <h2 className="text-forest-900">Data Security</h2>
+            <h2 className="text-forest-900">DATA SECURITY</h2>
             <p className="text-gray-600">
               We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no internet transmission is ever fully secure or error-free.
             </p>
 
-            <h2 className="text-forest-900">Your Rights</h2>
+            <h2 className="text-forest-900">YOUR RIGHTS</h2>
             <p className="text-gray-600">
               You have the right to:
             </p>
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
               <li>Opt out of marketing communications</li>
             </ul>
 
-            <h2 className="text-forest-900">Contact Us</h2>
+            <h2 className="text-forest-900">CONTACT US</h2>
             <p className="text-gray-600">
               If you have questions about this Privacy Policy, please contact us at:
             </p>

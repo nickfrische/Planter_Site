@@ -43,7 +43,7 @@ export default function Hero() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.3)' }}
           >
-            Your Private Gardener
+            YOUR PRIVATE GARDENER
           </motion.h1>
 
           <motion.p
@@ -66,13 +66,13 @@ export default function Hero() {
               href="#how-it-works"
               className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/25 transition-all text-center shadow-lg whitespace-nowrap"
             >
-              See How It Works
+              SEE HOW IT WORKS
             </Link>
             <Link
               href="#contact"
               className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white text-forest-800 text-sm sm:text-base font-semibold rounded-md hover:bg-cream-100 transition-colors text-center shadow-lg whitespace-nowrap"
             >
-              Request a Consultation
+              REQUEST A CONSULTATION
             </Link>
           </motion.div>
         </motion.div>

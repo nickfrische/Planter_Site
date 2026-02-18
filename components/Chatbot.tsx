@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const quickActions = [
-  { label: 'Subscriptions', message: 'Tell me about planter subscriptions' },
-  { label: 'Service Areas', message: 'What areas do you serve?' },
-  { label: 'Get Started', message: 'How do I get started?' },
+  { label: 'SUBSCRIPTIONS', message: 'Tell me about planter subscriptions' },
+  { label: 'SERVICE AREAS', message: 'What areas do you serve?' },
+  { label: 'GET STARTED', message: 'How do I get started?' },
 ];
 
 export default function Chatbot() {
@@ -53,7 +53,7 @@ export default function Chatbot() {
             className="mb-4 w-[calc(100vw-2rem)] sm:w-[360px] max-w-[360px] bg-white rounded-lg shadow-2xl overflow-hidden"
           >
             <div className="bg-forest-600 text-white p-4 flex justify-between items-center">
-              <span className="font-semibold">Chat with us</span>
+              <span className="font-semibold">CHAT WITH US</span>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-white hover:text-gray-200 transition-colors"

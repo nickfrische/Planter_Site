@@ -6,32 +6,32 @@ import { useRef } from 'react';
 
 const services = [
   {
-    title: 'Regular Watering',
+    title: 'REGULAR WATERING',
     description: 'Consistent hydration schedules tailored to your plants and local weather conditions.',
     features: ['Daily or scheduled visits', 'Weather-adjusted watering', 'Moisture monitoring'],
   },
   {
-    title: 'Pruning & Deadheading',
+    title: 'PRUNING & DEADHEADING',
     description: 'Remove dead blooms and shape plants to encourage new growth and maintain appearance.',
     features: ['Weekly deadheading', 'Shape maintenance', 'Growth promotion'],
   },
   {
-    title: 'Fertilization',
+    title: 'FERTILIZATION',
     description: 'Nutrient management to keep plants vibrant and healthy throughout the season.',
     features: ['Slow-release fertilizers', 'Seasonal feeding schedules', 'Custom nutrient blends'],
   },
   {
-    title: 'Pest & Disease Management',
+    title: 'PEST & DISEASE MANAGEMENT',
     description: 'Early detection and treatment to protect your plants from common issues.',
     features: ['Regular inspections', 'Organic treatment options', 'Preventive care'],
   },
   {
-    title: 'Soil Health',
+    title: 'SOIL HEALTH',
     description: 'Maintain optimal soil conditions for healthy root systems and plant growth.',
     features: ['Soil amendment', 'Drainage monitoring', 'pH balancing'],
   },
   {
-    title: 'Seasonal Cleanup',
+    title: 'SEASONAL CLEANUP',
     description: 'End-of-season cleanup and preparation for the next planting cycle.',
     features: ['Plant removal', 'Soil refresh', 'Container cleaning'],
   },
@@ -50,7 +50,7 @@ export default function MaintenanceServices() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-forest-900 mb-4">Maintenance Services</h2>
+          <h2 className="text-forest-900 mb-4">MAINTENANCE SERVICES</h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             Comprehensive care to keep your planters thriving
           </p>

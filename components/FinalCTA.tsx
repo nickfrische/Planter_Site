@@ -40,13 +40,13 @@ export default function FinalCTA() {
         className="relative z-10 container-padding max-w-[800px] mx-auto"
       >
         <h2 className="text-center text-white mb-12 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight break-words hyphens-none">
-          Ready to Transform Your Outdoor Space?
+          READY TO TRANSFORM YOUR OUTDOOR SPACE?
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
-              Name
+              NAME
             </label>
             <input
               type="text"
@@ -62,7 +62,7 @@ export default function FinalCTA() {
 
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-              Email
+              EMAIL
             </label>
             <input
               type="email"
@@ -78,7 +78,7 @@ export default function FinalCTA() {
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-              Phone
+              PHONE
             </label>
             <input
               type="tel"
@@ -94,7 +94,7 @@ export default function FinalCTA() {
 
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-              Message (optional)
+              MESSAGE (OPTIONAL)
             </label>
             <textarea
               id="message"
@@ -110,12 +110,12 @@ export default function FinalCTA() {
             type="submit"
             className="w-full px-8 py-4 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-lg"
           >
-            Request a Consultation
+            REQUEST A CONSULTATION
           </button>
         </form>
 
         <p className="text-center text-white/90 mt-8 text-base sm:text-lg leading-relaxed break-words">
-          Or call us:{' '}
+          OR CALL US:{' '}
           <a
             href="tel:+12485550123"
             className="font-semibold hover:text-forest-300 transition-colors whitespace-nowrap"

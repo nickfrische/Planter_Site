@@ -8,28 +8,28 @@ import Image from 'next/image';
 const seasons = [
   {
     id: 'spring',
-    label: 'Spring',
+    label: 'SPRING',
     description: 'Vibrant tulips, pansies, and fresh greenery bring color back after winter.',
     image: '/images/spring_planter.webp',
     iconSrc: '/icons/spring.png',
   },
   {
     id: 'summer',
-    label: 'Summer',
+    label: 'SUMMER',
     description: 'Tropical plants and flowers that can tolerate the heat of summer.',
     image: '/images/summer_planter.jpg',
     iconSrc: '/icons/summer.png',
   },
   {
     id: 'fall',
-    label: 'Fall',
+    label: 'FALL',
     description: 'Harvest themed featuring the warm, vibrant colors of the season.',
     image: '/images/fall_planter.jpg',
     iconSrc: '/icons/fall.png',
   },
   {
     id: 'winter',
-    label: 'Winter',
+    label: 'WINTER',
     description: 'Preserved evergreens, berries, and festive accents to last through the tough winter conditions.',
     image: '/images/winter_planter1.webp',
     iconSrc: '/icons/winter.png',
@@ -96,7 +96,7 @@ export default function SeasonalPreview() {
           transition={{ duration: 0.6 }}
           className="text-center text-forest-900 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
         >
-          Always In Season
+          ALWAYS IN SEASON
         </motion.h2>
       </div>
 

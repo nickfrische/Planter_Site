@@ -28,7 +28,7 @@ export default function PlanterHero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-block px-4 py-2 bg-forest-600/20 backdrop-blur-sm rounded-full mb-6"
             >
-              <span className="text-white font-medium text-sm">Our Signature Service</span>
+              <span className="text-white font-medium text-sm">OUR SIGNATURE SERVICE</span>
             </motion.div>
 
             <motion.h1
@@ -37,7 +37,7 @@ export default function PlanterHero() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-white mb-6"
             >
-              Planter Subscriptions
+              PLANTER SUBSCRIPTIONS
             </motion.h1>
 
             <motion.p
@@ -59,13 +59,13 @@ export default function PlanterHero() {
                 href="#tiers"
                 className="px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-center"
               >
-                View Subscription Tiers
+                VIEW SUBSCRIPTION TIERS
               </Link>
               <Link
                 href="/contact"
                 className="px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
               >
-                Request a Consultation
+                REQUEST A CONSULTATION
               </Link>
             </motion.div>
           </motion.div>

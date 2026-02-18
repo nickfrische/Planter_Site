@@ -27,7 +27,7 @@ export default function AboutHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-white mb-6"
             >
-              About Us
+              ABOUT US
             </motion.h1>
 
             <motion.p

@@ -12,7 +12,7 @@ export default function FAQHero() {
           transition={{ duration: 0.7 }}
           className="text-white mb-6"
         >
-          Frequently Asked Questions
+          FREQUENTLY ASKED QUESTIONS
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

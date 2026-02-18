@@ -140,7 +140,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 px-6"
         >
-          <h2 className="text-forest-900 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold">What Customers Say</h2>
+          <h2 className="text-forest-900 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold">WHAT CUSTOMERS SAY</h2>
         </motion.div>
 
         <motion.div

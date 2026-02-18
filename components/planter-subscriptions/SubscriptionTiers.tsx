@@ -27,7 +27,7 @@ const tiers: Tier[] = [
   {
     id: 'basic',
     name: 'BASIC',
-    tagline: 'Essential Beauty',
+    tagline: 'ESSENTIAL BEAUTY',
     features: [
       { text: 'Custom design' },
       { text: 'Premium plants and materials' },
@@ -39,7 +39,7 @@ const tiers: Tier[] = [
   {
     id: 'enhanced',
     name: 'ENHANCED',
-    tagline: 'Full-Service Care',
+    tagline: 'FULL-SERVICE CARE',
     features: [
       { text: 'Everything in BASIC, plus bi-weekly maintenance' },
       {
@@ -61,7 +61,7 @@ const tiers: Tier[] = [
   {
     id: 'ultimate',
     name: 'ULTIMATE',
-    tagline: 'Complete Package',
+    tagline: 'COMPLETE PACKAGE',
     features: [
       { text: 'Everything in ENHANCED, plus irrigation' },
       {
@@ -92,7 +92,7 @@ export default function SubscriptionTiers() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-white mb-4 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold">Choose Your Subscription</h2>
+          <h2 className="text-white mb-4 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold">CHOOSE YOUR SUBSCRIPTION</h2>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
             Select the plan that best fits your needs for year-round beauty.
           </p>
@@ -120,7 +120,7 @@ export default function SubscriptionTiers() {
                 <p className="text-gray-600 mb-6">{tier.tagline}</p>
 
                 <div className="mb-8">
-                  <div className="text-forest-900 text-lg font-semibold mb-3">What's Included:</div>
+                  <div className="text-forest-900 text-lg font-semibold mb-3">WHAT'S INCLUDED:</div>
                   <ul className="space-y-3">
                     {tier.features.map((feature, i) => (
                       <li key={i}>
@@ -164,7 +164,7 @@ export default function SubscriptionTiers() {
                       : 'bg-forest-50 text-forest-700 hover:bg-forest-100'
                   }`}
                 >
-                  Get Started
+                  GET STARTED
                 </Link>
               </div>
             </motion.div>
@@ -180,7 +180,7 @@ export default function SubscriptionTiers() {
           <p className="text-white/80 text-lg">
             Custom solutions available.{' '}
             <Link href="/contact" className="text-white font-semibold hover:text-cream-100">
-              Contact us
+              CONTACT US
             </Link>{' '}
             for a personalized quote.
           </p>

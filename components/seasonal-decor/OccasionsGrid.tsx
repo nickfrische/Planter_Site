@@ -7,20 +7,20 @@ import { useRef } from 'react';
 const occasions = [
   {
     id: 'seasonal',
-    title: 'Seasonal Transitions',
-    description: 'Autumn harvest themes and winter wonderlands',
+    title: 'SEASONAL TRANSITIONS',
+    description: 'Autumn harvest themes and winter wonderlands.',
     image: '/images/occasion-seasonal.jpg',
   },
   {
     id: 'holiday',
-    title: 'Holiday Seasons',
-    description: 'Easter, Memorial Day, Fourth of July',
+    title: 'HOLIDAY SEASONS',
+    description: 'Easter, Memorial Day, Fourth of July.',
     image: '/images/occasion-holiday.jpg',
   },
   {
     id: 'sports',
-    title: 'Sports Seasons',
-    description: 'For the sports enthusiast. Opening day baseball, Football kickoff, Basketball tip-off, and the drop of the first Hockey puck',
+    title: 'SPORTS SEASONS',
+    description: 'For the sports enthusiast. Opening day baseball, Football kickoff, Basketball tip-off, and the drop of the first Hockey puck.',
     image: '/images/occasion-sports.jpg',
   },
 ];
@@ -38,7 +38,7 @@ export default function OccasionsGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-forest-900 mb-4">Perfect for Every Season and Occasion</h2>
+          <h2 className="text-forest-900 mb-4">PERFECT FOR EVERY SEASON AND OCCASION</h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             Professional decor installations to celebrate what matters most
           </p>

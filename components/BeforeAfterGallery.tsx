@@ -10,22 +10,22 @@ const galleries = [
   {
     before: '/images/before-1.jpg',
     after: '/images/after-1.jpg',
-    title: 'Front Entrance Transformation',
+    title: 'FRONT ENTRANCE TRANSFORMATION',
   },
   {
     before: '/images/before-2.jpg',
     after: '/images/after-2.jpg',
-    title: 'Patio Refresh',
+    title: 'PATIO REFRESH',
   },
   {
     before: '/images/before-3.jpg',
     after: '/images/after-3.jpg',
-    title: 'Commercial Property',
+    title: 'COMMERCIAL PROPERTY',
   },
   {
     before: '/images/before-4.jpg',
     after: '/images/after-4.jpg',
-    title: 'Seasonal Update',
+    title: 'SEASONAL UPDATE',
   },
 ];
 
@@ -65,7 +65,7 @@ export default function BeforeAfterGallery() {
           transition={{ duration: 0.6 }}
           className="text-center text-forest-900 mb-16"
         >
-          The Difference
+          THE DIFFERENCE
         </motion.h2>
 
         <motion.div
@@ -84,7 +84,7 @@ export default function BeforeAfterGallery() {
             Before image placeholder
           </div>
           <span className="absolute top-4 left-4 px-3 py-1.5 bg-black/50 text-white text-sm font-medium rounded z-30">
-            Before
+            BEFORE
           </span>
 
           <div
@@ -96,7 +96,7 @@ export default function BeforeAfterGallery() {
             </div>
           </div>
           <span className="absolute top-4 right-4 px-3 py-1.5 bg-black/50 text-white text-sm font-medium rounded z-30">
-            After
+            AFTER
           </span>
 
           <div
@@ -139,7 +139,7 @@ export default function BeforeAfterGallery() {
             href="/gallery"
             className="inline-flex items-center gap-2 text-forest-700 font-medium hover:text-forest-800 transition-colors"
           >
-            See More Work
+            SEE MORE WORK
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

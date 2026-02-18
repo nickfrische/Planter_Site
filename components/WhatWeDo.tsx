@@ -9,7 +9,7 @@ import Image from 'next/image';
 const services = [
   {
     id: 'planters',
-    title: 'Planter Subscriptions',
+    title: 'PLANTER SUBSCRIPTIONS',
     description: 'Year-round beauty with seasonal refreshes for your home and business. Customized design, installation, and optional maintenance service.',
     href: '/planter-subscriptions',
     image: '/images/corporate-planter.jpg',
@@ -21,7 +21,7 @@ const services = [
   },
   {
     id: 'seasonal',
-    title: 'Seasonal Decor',
+    title: 'SEASONAL DECOR',
     description: 'Special occasion decorations for holidays, life events, and celebrations. One-time installations.',
     href: '/seasonal-decor',
     image: '/images/seasonal-decor.jpeg',
@@ -29,7 +29,7 @@ const services = [
   },
   {
     id: 'irrigation',
-    title: 'Irrigation',
+    title: 'IRRIGATION',
     description: 'Maximum beauty and plant health without the burden of manual watering.',
     href: '/irrigation',
     image: '/images/irrigation.jpeg',
@@ -42,7 +42,7 @@ const services = [
   },
   {
     id: 'events',
-    title: 'Events & Rentals',
+    title: 'EVENTS & RENTALS',
     description: 'Short-term planter and seasonal decor solutions for special events, real estate staging, and vacation rentals.',
     href: '/events-rentals',
     image: '/images/event-flower.webp',
@@ -141,7 +141,7 @@ export default function WhatWeDo() {
           transition={{ duration: 0.6 }}
           className="text-center text-forest-900 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
         >
-          What We Do
+          WHAT WE DO
         </motion.h2>
       </div>
 

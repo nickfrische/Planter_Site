@@ -7,19 +7,19 @@ import { useRef, useState } from 'react';
 const steps = [
   {
     number: '1',
-    title: 'Schedule a Design Consultation',
+    title: 'SCHEDULE A DESIGN CONSULTATION',
     description: 'During the consultation we will share how our service works, learn your preferences for colors and textures, and share our straight-forward payment process.',
     image: '/images/potted_plants_patio_pool.webp',
   },
   {
     number: '2',
-    title: 'Make Your Selections',
+    title: 'MAKE YOUR SELECTIONS',
     description: 'We will help you select what fits your style and budget.',
     image: '/images/seasonal-decor.jpeg',
   },
   {
     number: '3',
-    title: 'Custom On-Site Installation',
+    title: 'CUSTOM ON-SITE INSTALLATION',
     description: 'We communicate by text/email your installation week with no surprises. Everything is delivered fresh to you from our greenhouses for same-day installation. All debris is hauled away.',
     image: '/images/fall_planter.jpg',
   },
@@ -41,7 +41,7 @@ function Option1() {
           className="text-center mb-12"
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 tracking-wide text-gray-900 leading-tight break-words hyphens-none uppercase">
-            We Make It Easy
+            WE MAKE IT EASY
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 1: Centered</p>
         </motion.div>
@@ -110,7 +110,7 @@ function Option2() {
           className="text-center mb-12"
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 tracking-wide text-gray-900 leading-tight break-words hyphens-none uppercase">
-            We Make It Easy
+            WE MAKE IT EASY
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider break-words">Option 2: Left Justified</p>
         </motion.div>

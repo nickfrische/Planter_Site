@@ -16,41 +16,41 @@ export default function Footer() {
                 className="h-[100px] sm:h-[140px] md:h-[180px] w-auto"
               />
             </Link>
-            <p className="text-gray-400">Your Private Gardener</p>
+            <p className="text-gray-400">YOUR PRIVATE GARDENER</p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">SERVICES</h4>
             <ul className="space-y-2.5">
               <li>
                 <Link href="/planter-subscriptions" className="text-gray-400 hover:text-white transition-colors">
-                  Planter Subscriptions
+                  PLANTER SUBSCRIPTIONS
                 </Link>
               </li>
               <li>
                 <Link href="/seasonal-decor" className="text-gray-400 hover:text-white transition-colors">
-                  Seasonal Decor
+                  SEASONAL DECOR
                 </Link>
               </li>
               <li>
                 <Link href="/irrigation" className="text-gray-400 hover:text-white transition-colors">
-                  Irrigation
+                  IRRIGATION
                 </Link>
               </li>
               <li>
                 <Link href="/events-rentals" className="text-gray-400 hover:text-white transition-colors">
-                  Events & Rentals
+                  EVENTS & RENTALS
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <h4 className="text-lg font-semibold mb-4">COMPANY</h4>
             <ul className="space-y-2.5">
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
+                  ABOUT US
                 </Link>
               </li>
               <li>
@@ -60,7 +60,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                  CONTACT
                 </Link>
               </li>
               <li>
@@ -68,83 +68,83 @@ export default function Footer() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  Info@DSPlanter.com
+                  INFO@DSPLANTER.COM
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Areas We Serve</h4>
+            <h4 className="text-lg font-semibold mb-4">AREAS WE SERVE</h4>
             <ul className="space-y-2.5">
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Addison Township
+                  ADDISON TOWNSHIP
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Ann Arbor
+                  ANN ARBOR
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Birmingham
+                  BIRMINGHAM
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Bloomfield Hills
+                  BLOOMFIELD HILLS
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Grosse Pointe
+                  GROSSE POINTE
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Lake Orion
+                  LAKE ORION
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Metamora
+                  METAMORA
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Oakland County
+                  OAKLAND COUNTY
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Oakland Township
+                  OAKLAND TOWNSHIP
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Rochester Hills
+                  ROCHESTER HILLS
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Royal Oak
+                  ROYAL OAK
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Springfield
+                  SPRINGFIELD
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-gray-400 hover:text-white transition-colors">
-                  Troy
+                  TROY
                 </Link>
               </li>
               <li>
                 <Link href="/areas" className="text-forest-400 hover:text-forest-300 transition-colors flex items-center gap-1">
-                  View All
+                  VIEW ALL
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -161,10 +161,10 @@ export default function Footer() {
 
           <div className="flex gap-6 text-sm">
             <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-              Privacy
+              PRIVACY
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-              Terms
+              TERMS
             </Link>
           </div>
 

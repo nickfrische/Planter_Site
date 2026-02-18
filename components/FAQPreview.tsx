@@ -55,7 +55,7 @@ export default function FAQPreview() {
           transition={{ duration: 0.6 }}
           className="text-center text-forest-900 mb-16 text-xl sm:text-2xl md:text-3xl leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
         >
-          Common Questions
+          COMMON QUESTIONS
         </motion.h2>
 
         <motion.div
@@ -131,7 +131,7 @@ export default function FAQPreview() {
             href="/faq"
             className="inline-flex items-center gap-2 text-forest-700 font-semibold hover:text-forest-800 transition-colors"
           >
-            See All FAQs
+            SEE ALL FAQS
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

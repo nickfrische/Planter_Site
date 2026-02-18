@@ -6,7 +6,7 @@ import { useRef } from 'react';
 
 const values = [
   {
-    title: 'Quality First',
+    title: 'QUALITY FIRST',
     description: 'We use only premium plants and materials to create stunning displays that last.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -15,7 +15,7 @@ const values = [
     ),
   },
   {
-    title: 'Community Impact',
+    title: 'COMMUNITY IMPACT',
     description: 'Every planter creates flexible employment opportunities for local team members.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const values = [
     ),
   },
   {
-    title: 'Sustainability',
+    title: 'SUSTAINABILITY',
     description: 'Environmentally conscious practices in plant selection, water use, and materials.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,7 +33,7 @@ const values = [
     ),
   },
   {
-    title: 'Customer Delight',
+    title: 'CUSTOMER DELIGHT',
     description: 'We\'re not satisfied until your outdoor space exceeds your expectations.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function Values() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-forest-900 mb-4">Our Values</h2>
+          <h2 className="text-forest-900 mb-4">OUR VALUES</h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             The principles that guide everything we do
           </p>

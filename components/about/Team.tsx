@@ -6,14 +6,14 @@ import { useRef } from 'react';
 
 const team = [
   {
-    name: 'Brian',
-    role: 'Co-Founder',
+    name: 'BRIAN',
+    role: 'CO-FOUNDER',
     bio: 'Passionate about creating beautiful outdoor spaces and building a sustainable local business.',
     image: '/images/team-brian.jpg',
   },
   {
-    name: 'Eliza',
-    role: 'Co-Founder',
+    name: 'ELIZA',
+    role: 'CO-FOUNDER',
     bio: 'Dedicated to design excellence and ensuring every planter exceeds customer expectations.',
     image: '/images/team-eliza.jpg',
   },
@@ -32,7 +32,7 @@ export default function Team() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-forest-900 mb-4">Meet the Team</h2>
+          <h2 className="text-forest-900 mb-4">MEET THE TEAM</h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             The people behind your beautiful planters
           </p>

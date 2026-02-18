@@ -34,13 +34,13 @@ export default function ContactForm() {
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
       transition={{ duration: 0.7 }}
     >
-      <h2 className="text-forest-900 text-3xl font-bold mb-2">Send Us a Message</h2>
+      <h2 className="text-forest-900 text-3xl font-bold mb-2">SEND US A MESSAGE</h2>
       <p className="text-gray-600 mb-8">Fill out the form and we'll get back to you within 24 hours.</p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-            Name *
+            NAME *
           </label>
           <input
             type="text"
@@ -56,7 +56,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-            Email *
+            EMAIL *
           </label>
           <input
             type="email"
@@ -72,7 +72,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-            Phone
+            PHONE
           </label>
           <input
             type="tel"
@@ -87,7 +87,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="service" className="block text-gray-700 font-medium mb-2">
-            Interested In
+            INTERESTED IN
           </label>
           <select
             id="service"
@@ -96,19 +96,19 @@ export default function ContactForm() {
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-forest-600 focus:border-transparent"
           >
-            <option value="">Select a service</option>
-            <option value="planter-subscriptions">Planter Subscriptions</option>
-            <option value="seasonal-decor">Seasonal Decor</option>
-            <option value="irrigation">Irrigation</option>
-            <option value="maintenance">Maintenance</option>
-            <option value="events-rentals">Events & Rentals</option>
-            <option value="other">Other</option>
+            <option value="">SELECT A SERVICE</option>
+            <option value="planter-subscriptions">PLANTER SUBSCRIPTIONS</option>
+            <option value="seasonal-decor">SEASONAL DECOR</option>
+            <option value="irrigation">IRRIGATION</option>
+            <option value="maintenance">MAINTENANCE</option>
+            <option value="events-rentals">EVENTS & RENTALS</option>
+            <option value="other">OTHER</option>
           </select>
         </div>
 
         <div>
           <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-            Message
+            MESSAGE
           </label>
           <textarea
             id="message"
@@ -124,7 +124,7 @@ export default function ContactForm() {
           type="submit"
           className="w-full px-8 py-4 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors"
         >
-          Send Message
+          SEND MESSAGE
         </button>
       </form>
     </motion.div>

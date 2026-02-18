@@ -12,7 +12,7 @@ export default function AreasHero() {
           transition={{ duration: 0.7 }}
           className="text-white mb-6"
         >
-          Areas We Serve
+          AREAS WE SERVE
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

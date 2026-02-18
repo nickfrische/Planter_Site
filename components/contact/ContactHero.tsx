@@ -12,7 +12,7 @@ export default function ContactHero() {
           transition={{ duration: 0.7 }}
           className="text-white mb-6"
         >
-          Get In Touch
+          GET IN TOUCH
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
