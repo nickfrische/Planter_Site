@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Helper function to add letter spacing to labels
+// Helper function to add letter spacing to labels (returns string)
 // For single words: "SPRING" -> "S P R I N G"
 // For multi-word: "PLANTER SUBSCRIPTIONS" -> "P L A N T E R · S U B S C R I P T I O N S"
 const formatWithLetterSpacing = (text: string): string => {
@@ -14,6 +14,22 @@ const formatWithLetterSpacing = (text: string): string => {
     .split(' ')
     .map(word => word.split('').join(' '))
     .join('  ·  '); // Middle dot between words
+};
+
+// Helper component that adds letter spacing but prevents word breaks
+// Each word is wrapped in whitespace-nowrap so letters stay together
+const SpacedTitle = ({ text }: { text: string }) => {
+  const words = text.split(' ');
+  return (
+    <>
+      {words.map((word, index) => (
+        <span key={index}>
+          <span className="whitespace-nowrap">{word.split('').join(' ')}</span>
+          {index < words.length - 1 && <span className="mx-1"> · </span>}
+        </span>
+      ))}
+    </>
+  );
 };
 
 const services = [
@@ -320,7 +336,7 @@ export default function WhatWeDo() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-lg sm:text-xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-3 leading-tight break-words hyphens-none">
+                <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     {service.iconSrc ? (
                       <Image
@@ -334,11 +350,10 @@ export default function WhatWeDo() {
                       service.icon
                     )}
                   </div>
-                  <span className="tracking-[0.15em]">{formatWithLetterSpacing(service.title)}</span>
-                  <svg className="w-6 h-6 opacity-60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </h3>
+                  <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-lg sm:text-xl font-[var(--font-poppins)] font-semibold uppercase leading-tight">
+                    <SpacedTitle text={service.title} />
+                  </h3>
+                </div>
               </div>
             </Link>
           </motion.div>
