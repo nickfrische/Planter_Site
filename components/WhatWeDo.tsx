@@ -217,7 +217,7 @@ export default function WhatWeDo() {
                 </div>
                 <div className="flex-1">
                   <h3
-                    className={`font-[var(--font-poppins)] transition-all duration-300 leading-tight break-words hyphens-none ${
+                    className={`font-[var(--font-jost)] transition-all duration-300 leading-tight break-words hyphens-none ${
                       activeService === service.id
                         ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
                         : 'text-xl font-semibold text-gray-600 mb-0'
@@ -282,7 +282,7 @@ export default function WhatWeDo() {
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-4 leading-tight break-words hyphens-none">
+                  <h3 className="text-white group-hover:text-white/80 transition-colors duration-300 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-[var(--font-jost)] font-semibold uppercase flex items-center gap-4 leading-tight break-words hyphens-none">
                     <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0 text-white">
                       {service.iconSrc ? (
                         <Image
@@ -350,7 +350,7 @@ export default function WhatWeDo() {
                       <span className="[&>svg]:w-6 [&>svg]:h-6 [&>svg]:stroke-white">{service.icon}</span>
                     )}
                   </div>
-                  <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-lg sm:text-xl font-[var(--font-poppins)] font-semibold uppercase leading-tight">
+                  <h3 className="text-white group-hover:text-white/80 group-active:text-white/80 transition-colors duration-300 text-lg sm:text-xl font-[var(--font-jost)] font-semibold uppercase leading-tight">
                     <SpacedTitle text={service.title} />
                   </h3>
                 </div>

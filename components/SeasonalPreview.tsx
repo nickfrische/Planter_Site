@@ -133,7 +133,7 @@ export default function SeasonalPreview() {
 
                 {/* Bottom content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-4 leading-tight">
+                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[var(--font-jost)] font-semibold uppercase flex items-center gap-4 leading-tight">
                     <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                       {season.iconSrc && (
                         <Image
@@ -193,7 +193,7 @@ export default function SeasonalPreview() {
                 </div>
                 <div className="flex-1 text-right">
                   <h3
-                    className={`font-[var(--font-poppins)] transition-all duration-300 ${
+                    className={`font-[var(--font-jost)] transition-all duration-300 ${
                       activeSeason === season.id
                         ? 'text-2xl xl:text-3xl font-bold text-forest-900 mb-2'
                         : 'text-xl font-semibold text-gray-600 mb-0'
@@ -242,7 +242,7 @@ export default function SeasonalPreview() {
 
               {/* Bottom content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-3 leading-tight break-words">
+                <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-[var(--font-jost)] font-semibold uppercase flex items-center gap-3 leading-tight break-words">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                     {season.iconSrc && (
                       <Image

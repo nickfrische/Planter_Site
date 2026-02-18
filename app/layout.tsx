@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { Poppins } from 'next/font/google';
+import { Jost } from 'next/font/google';
 import './globals.css';
 
-const poppins = Poppins({
+const jost = Jost({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-poppins',
+  variable: '--font-jost',
 });
 
 export const viewport: Viewport = {
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={jost.variable}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
