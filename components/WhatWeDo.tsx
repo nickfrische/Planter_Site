@@ -251,13 +251,9 @@ export default function WhatWeDo() {
             >
               <Link
                 href={service.href}
-                className="group block relative h-full overflow-hidden rounded-l-2xl bg-gray-100 cursor-pointer"
+                className="group block relative h-full overflow-hidden rounded-l-2xl cursor-pointer bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${service.image})` }}
               >
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300 group-hover:from-black/80" />
 
                 {/* Click indicator arrow - appears on hover */}
@@ -307,14 +303,11 @@ export default function WhatWeDo() {
             className="relative min-h-screen h-screen snap-start snap-always overflow-hidden bg-gray-900"
             style={{ minHeight: '100svh', height: '100svh' }}
           >
-            <Link href={service.href} className="group block relative w-full h-full">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
-                style={{ height: '100%', width: '100%' }}
-              />
-
+            <Link
+              href={service.href}
+              className="group block relative w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${service.image})` }}
+            >
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* Tap indicator */}

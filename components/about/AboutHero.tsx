@@ -4,13 +4,10 @@ import { motion } from 'framer-motion';
 
 export default function AboutHero() {
   return (
-    <section className="w-full min-h-[70vh] relative overflow-hidden">
-      <img
-        src="/images/about-us-picture.png"
-        alt="The Planter Business team"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      
+    <section
+      className="w-full min-h-[70vh] relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/images/about-us-picture.png)' }}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
       <div className="relative z-10 min-h-[70vh] flex items-center">

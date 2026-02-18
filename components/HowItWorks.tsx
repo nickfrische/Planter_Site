@@ -80,17 +80,9 @@ export default function HowItWorks() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/5]"
+              className="group relative overflow-hidden rounded-lg aspect-[3/4] md:aspect-[4/5] bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${step.image})` }}
             >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{
-                  backgroundImage: `url(${step.image})`,
-                  backgroundColor: '#e5e7eb', // Fallback color
-                }}
-              />
-
               {/* Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60 transition-opacity duration-500 group-hover:from-black/50 group-hover:via-black/40 group-hover:to-black/70" />
 

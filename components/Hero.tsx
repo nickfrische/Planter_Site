@@ -5,16 +5,10 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[70vh] min-h-[500px] max-h-[800px] overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/potted_plants_patio_pool.webp"
-          alt="Beautiful patio with potted plants by the pool"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
+    <section
+      className="relative w-full min-h-[100svh] md:min-h-[70vh] md:max-h-[800px] overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/images/potted_plants_patio_pool.webp)' }}
+    >
       {/* Layered overlays for optimal text readability */}
       {/* Base dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
@@ -29,18 +23,18 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
 
       {/* Centered Content Overlay */}
-      <div className="relative z-10 h-full flex items-center justify-center">
+      <div className="relative z-10 min-h-[100svh] md:min-h-[70vh] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center px-6 max-w-3xl mx-auto"
+          className="text-center px-10 sm:px-8 md:px-6 max-w-3xl mx-auto"
         >
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight break-words hyphens-none uppercase tracking-wide font-semibold"
+            className="text-[clamp(1.1rem,4vw,3rem)] text-white mb-4 leading-tight uppercase tracking-normal sm:tracking-wide font-semibold whitespace-nowrap"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.3)' }}
           >
             YOUR PRIVATE GARDENER

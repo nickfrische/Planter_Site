@@ -51,17 +51,11 @@ export default function HowItWorksVariations() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer"
+              className="group relative overflow-hidden rounded-lg aspect-[3/4] cursor-pointer bg-cover bg-center bg-no-repeat transition-transform duration-700"
+              style={{ backgroundImage: `url(${step.image})` }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{
-                  backgroundImage: `url(${step.image})`,
-                  backgroundColor: '#e5e7eb',
-                }}
-              />
 
               {/* Overlay that darkens on hover */}
               <div className={`absolute inset-0 transition-all duration-500 ${hoveredIndex === index ? 'bg-gradient-to-b from-forest-900/95 to-forest-900/98' : 'bg-gradient-to-b from-black/30 to-black/50'}`}>

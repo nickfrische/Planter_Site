@@ -125,12 +125,10 @@ export default function SeasonalPreview() {
               }}
               className="h-full snap-start snap-always"
             >
-              <div className="group block relative h-full overflow-hidden rounded-r-2xl bg-gray-100">
-                <img
-                  src={season.image}
-                  alt={`${season.label} planter arrangement`}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+              <div
+                className="group block relative h-full overflow-hidden rounded-r-2xl bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${season.image})` }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                 {/* Bottom content */}
@@ -236,17 +234,10 @@ export default function SeasonalPreview() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative min-h-screen h-screen snap-start snap-always overflow-hidden group bg-gray-900"
-            style={{ minHeight: '100svh', height: '100svh' }}
+            className="relative min-h-screen h-screen snap-start snap-always overflow-hidden group bg-cover bg-center bg-no-repeat"
+            style={{ minHeight: '100svh', height: '100svh', backgroundImage: `url(${season.image})` }}
           >
             <div className="block relative w-full h-full">
-              <img
-                src={season.image}
-                alt={`${season.label} planter arrangement`}
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
-                style={{ height: '100%', width: '100%' }}
-              />
-
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* Bottom content */}

@@ -5,13 +5,10 @@ import Link from 'next/link';
 
 export default function EventsHero() {
   return (
-    <section className="w-full min-h-[90vh] relative overflow-hidden">
-      <img
-        src="/images/event-flower.webp"
-        alt="Event floral arrangements"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      
+    <section
+      className="w-full min-h-[90vh] relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/images/event-flower.webp)' }}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
       <div className="relative z-10 min-h-[90vh] flex items-end">
