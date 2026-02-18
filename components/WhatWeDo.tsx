@@ -164,7 +164,7 @@ export default function WhatWeDo() {
             className="hidden lg:flex fixed left-0 top-0 h-screen w-[350px] xl:w-[400px] z-20 flex-col justify-center pl-8 xl:pl-16 pr-8 bg-gradient-to-r from-black/60 via-black/40 to-transparent pointer-events-none"
           >
             <div className="pointer-events-auto">
-              <h2 className="text-white text-2xl xl:text-3xl font-semibold uppercase tracking-wide mb-10">
+              <h2 className="text-white text-2xl xl:text-3xl font-semibold uppercase tracking-wide mb-10 whitespace-nowrap">
                 WHAT WE DO
               </h2>
               <div className="space-y-6">
