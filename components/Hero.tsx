@@ -58,13 +58,13 @@ export default function Hero() {
           >
             <Link
               href="#how-it-works"
-              className="px-8 py-3.5 bg-white/15 backdrop-blur-md border border-white/40 text-white text-sm sm:text-base font-semibold rounded-md hover:bg-white/25 transition-all text-center shadow-lg whitespace-nowrap"
+              className="w-full sm:w-auto px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-center whitespace-nowrap"
             >
               SEE HOW IT WORKS
             </Link>
             <Link
               href="#contact"
-              className="px-8 py-3.5 bg-white text-forest-800 text-sm sm:text-base font-semibold rounded-md hover:bg-cream-100 transition-colors text-center shadow-lg whitespace-nowrap"
+              className="w-full sm:w-auto px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center whitespace-nowrap"
             >
               REQUEST A CONSULTATION
             </Link>

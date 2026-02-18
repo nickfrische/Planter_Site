@@ -85,7 +85,7 @@ export default function ServiceAreaGrid() {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors"
+              className="inline-block min-w-[220px] px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-center"
             >
               CONTACT
             </Link>

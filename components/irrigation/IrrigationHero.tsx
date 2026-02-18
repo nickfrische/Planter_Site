@@ -54,13 +54,13 @@ export default function IrrigationHero() {
             >
               <Link
                 href="#benefits"
-                className="px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-center"
+                className="min-w-[220px] px-8 py-3.5 bg-forest-600 text-white font-semibold rounded-md hover:bg-forest-700 transition-colors text-center"
               >
                 LEARN MORE
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
+                className="min-w-[220px] px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
               >
                 REQUEST A QUOTE
               </Link>

@@ -54,13 +54,13 @@ export default function SeasonalDecorHero() {
             >
               <Link
                 href="#occasions"
-                className="px-8 py-3.5 bg-earth-600 text-white font-semibold rounded-md hover:bg-earth-700 transition-colors text-center"
+                className="min-w-[220px] px-8 py-3.5 bg-earth-600 text-white font-semibold rounded-md hover:bg-earth-700 transition-colors text-center"
               >
                 VIEW OCCASIONS
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
+                className="min-w-[220px] px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
               >
                 REQUEST A QUOTE
               </Link>
