@@ -180,7 +180,7 @@ export default function SubscriptionTiers() {
           <p className="text-white/80 text-lg">
             Custom solutions available.{' '}
             <Link href="/contact" className="text-white font-semibold hover:text-cream-100">
-              CONTACT US
+              CONTACT
             </Link>{' '}
             for a personalized quote.
           </p>

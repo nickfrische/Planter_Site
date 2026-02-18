@@ -63,7 +63,7 @@ export default function MaintenanceHero() {
                 href="/contact"
                 className="px-8 py-3.5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-md hover:bg-white/20 transition-colors text-center"
               >
-                GET STARTED
+                REQUEST A QUOTE
               </Link>
             </motion.div>
           </motion.div>

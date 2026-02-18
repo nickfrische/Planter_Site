@@ -28,7 +28,7 @@ export default function NotFound() {
               href="/contact"
               className="px-8 py-3.5 bg-white text-forest-700 font-semibold rounded-md border border-forest-200 hover:bg-forest-50 transition-colors"
             >
-              Contact Us
+              CONTACT
             </Link>
           </div>
         </div>

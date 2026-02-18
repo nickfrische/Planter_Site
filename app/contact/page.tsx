@@ -6,7 +6,7 @@ import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
 
 export const metadata = {
-  title: 'Contact Us | Planter Business',
+  title: 'Contact | Detroit Style Planter Company',
   description: 'Get in touch to request a consultation or learn more about our planter services.',
 };
 
