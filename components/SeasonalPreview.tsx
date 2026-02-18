@@ -5,6 +5,16 @@ import { useInView } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
+// Helper function to add letter spacing to labels
+// For single words: "SPRING" -> "S P R I N G"
+// For multi-word: "PLANTER SUBSCRIPTIONS" -> "P L A N T E R · S U B S C R I P T I O N S"
+const formatWithLetterSpacing = (text: string): string => {
+  return text
+    .split(' ')
+    .map(word => word.split('').join(' '))
+    .join('  ·  '); // Middle dot between words
+};
+
 const seasons = [
   {
     id: 'spring',
@@ -125,7 +135,7 @@ export default function SeasonalPreview() {
 
                 {/* Bottom content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-4 leading-tight break-words">
+                  <h3 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[var(--font-poppins)] font-semibold uppercase flex items-center gap-4 leading-tight">
                     <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                       {season.iconSrc && (
                         <Image
@@ -137,7 +147,7 @@ export default function SeasonalPreview() {
                         />
                       )}
                     </div>
-                    {season.label}
+                    <span className="tracking-[0.3em]">{formatWithLetterSpacing(season.label)}</span>
                   </h3>
                 </div>
               </div>
@@ -156,11 +166,11 @@ export default function SeasonalPreview() {
             <button
               key={season.id}
               onClick={() => scrollToSeason(season.id)}
-              className={`w-full text-left group transition-all duration-300 ${
+              className={`w-full text-right group transition-all duration-300 ${
                 activeSeason === season.id ? '' : 'opacity-40 hover:opacity-60'
               }`}
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 flex-row-reverse">
                 <div
                   className={`flex-shrink-0 rounded-full flex items-center justify-center transition-all duration-300 ${
                     activeSeason === season.id
@@ -183,7 +193,7 @@ export default function SeasonalPreview() {
                     />
                   </div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 text-right">
                   <h3
                     className={`font-[var(--font-poppins)] transition-all duration-300 ${
                       activeSeason === season.id
@@ -207,7 +217,7 @@ export default function SeasonalPreview() {
                 </div>
               </div>
               <div
-                className={`mt-4 ml-18 h-1 rounded-full transition-all duration-300 ${
+                className={`mt-4 mr-18 h-1 rounded-full transition-all duration-300 ml-auto ${
                   activeSeason === season.id
                     ? 'bg-forest-600 w-16'
                     : 'bg-gray-200 w-8'
@@ -253,7 +263,7 @@ export default function SeasonalPreview() {
                       />
                     )}
                   </div>
-                  {season.label}
+                  <span className="tracking-[0.2em]">{formatWithLetterSpacing(season.label)}</span>
                 </h3>
               </div>
             </div>
