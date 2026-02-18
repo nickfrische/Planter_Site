@@ -34,10 +34,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-[clamp(1.1rem,4vw,3rem)] text-white mb-4 leading-tight uppercase tracking-normal sm:tracking-wide font-semibold whitespace-nowrap"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight uppercase font-semibold sm:whitespace-nowrap"
             style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.3)' }}
           >
-            YOUR PRIVATE GARDENER
+            YOUR PRIVATE<br className="sm:hidden" /> GARDENER
           </motion.h1>
 
           <motion.p
