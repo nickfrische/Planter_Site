@@ -50,8 +50,7 @@ const tiers: Tier[] = [
           { text: 'Fertilize: Water-soluble fertilizer for beautiful blooms' },
           { text: 'Dead Head: Remove dead flowers to encourage blooming' },
           { text: 'Prune: Remove stray/wilting branches for balanced growth' },
-          { text: 'Spray for Insects (organic): Examination and treatment' },
-          { text: 'Spray for Disease (organic): Preventative fungus treatment' },
+          { text: 'Inspect for insects, fungus, and disease. Provide treatment solution as needed' },
           { text: 'Replacement of plants (as appropriate)' },
         ]
       },

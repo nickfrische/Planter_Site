@@ -90,23 +90,6 @@ export default function ContactInfo() {
         </p>
       </div>
 
-      <div className="bg-forest-50 rounded-lg p-8">
-        <h3 className="text-forest-900 font-bold mb-3">WHAT HAPPENS NEXT?</h3>
-        <ol className="space-y-3">
-          <li className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-forest-600 text-white text-sm flex items-center justify-center font-bold">1</span>
-            <span className="text-gray-600">We'll review your inquiry and contact you to schedule a consultation</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-forest-600 text-white text-sm flex items-center justify-center font-bold">2</span>
-            <span className="text-gray-600">We visit your property to assess your space and discuss your vision</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-forest-600 text-white text-sm flex items-center justify-center font-bold">3</span>
-            <span className="text-gray-600">You'll receive a custom proposal tailored to your needs</span>
-          </li>
-        </ol>
-      </div>
-    </motion.div>
+      </motion.div>
   );
 }

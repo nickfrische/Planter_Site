@@ -3,10 +3,8 @@ import Hero from '@/components/Hero';
 import VideoSection from '@/components/VideoSection';
 import HowItWorksVariations from '@/components/HowItWorksVariations';
 import WhatWeDo from '@/components/WhatWeDo';
-import SeasonalPreview from '@/components/SeasonalPreview';
 import Testimonials from '@/components/Testimonials';
 import FAQPreview from '@/components/FAQPreview';
-import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
 import Schema from '@/components/Schema';
@@ -27,9 +25,6 @@ export default function HomePage() {
         {/* What We Do - Services overview */}
         <WhatWeDo />
 
-        {/* Seasonal Preview - "Always in Season" */}
-        <SeasonalPreview />
-
         {/* Video Section - Full-width explainer video */}
         <VideoSection
           videoId="dQw4w9WgXcQ"
@@ -42,9 +37,6 @@ export default function HomePage() {
 
         {/* FAQ Preview - Compact accordion */}
         <FAQPreview />
-
-        {/* Final CTA - Contact form */}
-        <FinalCTA />
       </main>
 
       <Footer />

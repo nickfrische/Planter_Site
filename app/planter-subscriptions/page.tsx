@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Chatbot from '@/components/Chatbot';
 import PlanterHero from '@/components/planter-subscriptions/PlanterHero';
-import HowItWorks from '@/components/HowItWorks';
+import HowItWorksVariations from '@/components/HowItWorksVariations';
 import SubscriptionTiers from '@/components/planter-subscriptions/SubscriptionTiers';
 import SeasonalPreview from '@/components/SeasonalPreview';
 import BeforeAfterGallery from '@/components/BeforeAfterGallery';
@@ -19,9 +19,9 @@ export default function PlanterSubscriptionsPage() {
       <Header />
       <main className="pt-[72px]">
         <PlanterHero />
-        <HowItWorks />
-        <SubscriptionTiers />
         <SeasonalPreview />
+        <HowItWorksVariations />
+        <SubscriptionTiers />
         <BeforeAfterGallery />
         <FinalCTA />
       </main>

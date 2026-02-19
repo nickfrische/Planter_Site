@@ -6,7 +6,7 @@ import { useState, useRef } from 'react';
 
 const faqs = [
   {
-    category: 'Subscriptions',
+    category: 'SUBSCRIPTIONS',
     questions: [
       {
         q: 'What is a planter subscription?',
@@ -27,7 +27,7 @@ const faqs = [
     ],
   },
   {
-    category: 'Service Details',
+    category: 'SERVICE DETAILS',
     questions: [
       {
         q: 'What areas do you serve?',
@@ -56,7 +56,7 @@ const faqs = [
     ],
   },
   {
-    category: 'Pricing & Payment',
+    category: 'PRICING & PAYMENT',
     questions: [
       {
         q: 'How much does it cost?',
@@ -73,7 +73,7 @@ const faqs = [
     ],
   },
   {
-    category: 'Plants & Design',
+    category: 'PLANTS & DESIGN',
     questions: [
       {
         q: 'Does everyone get the same arrangement?',
@@ -94,7 +94,7 @@ const faqs = [
     ],
   },
   {
-    category: 'Getting Started',
+    category: 'GETTING STARTED',
     questions: [
       {
         q: 'How do I get started?',
@@ -138,7 +138,7 @@ export default function FAQList() {
             transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
             className="mb-12"
           >
-            <h2 className="text-forest-900 text-2xl font-bold mb-6">{category.category}</h2>
+            <h2 className="text-forest-900 text-xl sm:text-2xl md:text-3xl uppercase tracking-wide font-semibold mb-6">{category.category}</h2>
             
             <div className="space-y-4">
               {category.questions.map((faq, questionIndex) => {
